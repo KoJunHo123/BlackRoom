@@ -18,7 +18,6 @@ public class LeftCheckMass : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("½Ã¹ß");
         if (other.gameObject.tag == "Answer")
             Mass += 9;
         else Mass += 10;

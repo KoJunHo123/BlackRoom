@@ -8,20 +8,23 @@ public class MakeWeight : MonoBehaviour
     [SerializeField] GameObject weightAnswer;
     [SerializeField] Transform[] weightPosition = new Transform[9];
     public int[] Index = new int[9];
+    AnswerPlate GetClear;
     // Start is called before the first frame update
     void Start()
     {
-        SetStage();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void SetStage()
     {
+        StageManager2 Manager = FindObjectOfType<StageManager2>();
+        Debug.Log("생성함수");
+        Manager.DestroyWeight = false;
         for (int i = 0; i < weightPosition.Length; i++)
         {
             Index[i] = Random.Range(0, 9);

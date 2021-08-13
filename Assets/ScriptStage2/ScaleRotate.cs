@@ -7,6 +7,7 @@ public class ScaleRotate : MonoBehaviour
     [SerializeField] GameObject Stick;
     [SerializeField] GameObject LeftScale;
     [SerializeField] GameObject RightScale;
+    StageManager2 Manager;
     public bool isLeftHeavy;
     public bool isRightHeavy;
     public float speed = 100f;
@@ -26,6 +27,7 @@ public class ScaleRotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Manager = FindObjectOfType<StageManager2>();
         if (isLeftHeavy)
         {
             LeftHeavy();
@@ -45,6 +47,7 @@ public class ScaleRotate : MonoBehaviour
             isLeftHeavy = false;
             speed = 100f;
             timer = 0;
+            Manager.Lock = false;
         }
         else if(RightEnd)
         {
@@ -55,6 +58,7 @@ public class ScaleRotate : MonoBehaviour
             isRightHeavy = false;
             speed = 100f;
             timer = 0;
+            Manager.Lock = false;
         }
 
     }
