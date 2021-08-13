@@ -10,7 +10,7 @@ public class ScaleRotate : MonoBehaviour
     StageManager2 Manager;
     public bool isLeftHeavy;
     public bool isRightHeavy;
-    public float speed = 100f;
+    public float speed = 15f;
     public float UpDowndelta;
     public float LRdelta;
     public bool LeftEnd;
@@ -45,8 +45,9 @@ public class ScaleRotate : MonoBehaviour
             LeftEnd = false;
             
             isLeftHeavy = false;
-            speed = 100f;
             timer = 0;
+            UpDownInfo = 0;
+            LRInfo = 0;
             Manager.Lock = false;
         }
         else if(RightEnd)
@@ -56,8 +57,9 @@ public class ScaleRotate : MonoBehaviour
             RightScale.transform.position = new Vector3(RightScale.transform.position.x - LRInfo, RightScale.transform.position.y + UpDownInfo, RightScale.transform.position.z);
             RightEnd = false;
             isRightHeavy = false;
-            speed = 100f;
             timer = 0;
+            UpDownInfo = 0;
+            LRInfo = 0;
             Manager.Lock = false;
         }
 

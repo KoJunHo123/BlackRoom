@@ -55,15 +55,15 @@ public class StageManager2 : MonoBehaviour
 
     public void ShowState()
     {
-        Lock = true;
-        if (Lock)
+        if (!Lock && UsingScale > 0)
         {
+            Lock = true;
             if (UsingScale > 0)
             {
                 RightCheckMass Right = FindObjectOfType<RightCheckMass>();
                 LeftCheckMass Left = FindObjectOfType<LeftCheckMass>();
                 ScaleRotate ScaleControll = FindObjectOfType<ScaleRotate>();
-                ScaleControll.speed = 100f;
+                ScaleControll.speed = 20f;
                 if (Left.Mass > Right.Mass)
                 {
                     ScaleControll.isLeftHeavy = true;
