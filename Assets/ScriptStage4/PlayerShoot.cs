@@ -44,7 +44,7 @@ public class PlayerShoot : MonoBehaviour
     {
         if (gunShootCnotrol == true)
         {
-            Instantiate(Bullet, GunMuzzle.position, GunMuzzle.transform.rotation);
+            Instantiate(Bullet, GunMuzzle.position,GunMuzzle.rotation);
             count--;
             m_Animator.SetTrigger("Shot1");
             gunShootCnotrol = false;

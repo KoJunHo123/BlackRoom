@@ -24,11 +24,10 @@ public class ObjectSetting : MonoBehaviour
         if (other.gameObject.tag == "Bullet")
         {
 
-            Debug.Log("맞음123123a");
             if (SameOrDiff == false)
             {
-                Debug.Log("맞음");
                 StageManager.count--;
+                Destroy(other);
                 Destroy(gameObject);
             }
             else StageManager.GameOver = true;

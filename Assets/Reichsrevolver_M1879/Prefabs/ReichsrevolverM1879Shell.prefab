@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 429410}
   - component: {fileID: 4939584583868761454}
-  - component: {fileID: 1733206992672250896}
+  - component: {fileID: 290701822296777493}
   m_Layer: 0
   m_Name: ReichsrevolverM1879Shell
   m_TagString: Bullet
@@ -25,15 +25,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 115080}
-  m_LocalRotation: {x: 1, y: -0.000000043711417, z: 0.000000043711367, w: -0.0000007748604}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.011183388, y: 0.038050473, z: 0.006324009}
-  m_LocalScale: {x: 12, y: 12, z: 12}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 403086}
   - {fileID: 458744}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &4939584583868761454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46,9 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be79eadfe8f1b89459dfc65937493857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
---- !u!136 &1733206992672250896
-CapsuleCollider:
+  speed: 20
+--- !u!65 &290701822296777493
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -57,10 +57,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.009993685, y: 0.029596686, z: 0.009513437}
+  m_Center: {x: -0.00006818927, y: 0.014252266, z: -0.00011987597}
 --- !u!1 &129626
 GameObject:
   m_ObjectHideFlags: 0

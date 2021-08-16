@@ -323,7 +323,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -687532966275245066, guid: f5a1bb1bf8641274c88db4c73f943ae4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f5a1bb1bf8641274c88db4c73f943ae4, type: 3}
 --- !u!4 &43993303 stripped
 Transform:
@@ -454,7 +455,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: HorrorDoll (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5593124672899456471, guid: bdbfd5713f226a243bea5cd0d17d2302, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bdbfd5713f226a243bea5cd0d17d2302, type: 3}
 --- !u!4 &84963399 stripped
 Transform:
@@ -1048,7 +1050,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -687532966275245066, guid: f5a1bb1bf8641274c88db4c73f943ae4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f5a1bb1bf8641274c88db4c73f943ae4, type: 3}
 --- !u!4 &401933070 stripped
 Transform:
@@ -1639,7 +1642,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -687532966275245066, guid: f5a1bb1bf8641274c88db4c73f943ae4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f5a1bb1bf8641274c88db4c73f943ae4, type: 3}
 --- !u!4 &722353449 stripped
 Transform:
@@ -1838,7 +1842,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -687532966275245066, guid: f5a1bb1bf8641274c88db4c73f943ae4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f5a1bb1bf8641274c88db4c73f943ae4, type: 3}
 --- !u!4 &766712950 stripped
 Transform:
@@ -1863,10 +1868,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GunMuzzle: {fileID: 1165819112}
-  Bullet: {fileID: 8433823732275524538, guid: 218343a914b092d40bc29ae2ab842abc, type: 3}
+  Bullet: {fileID: 1247821296844276232, guid: bbde3f4797519fd41a09c64ff4acf513, type: 3}
   m_Animator: {fileID: 771643997}
   time: 0.55
-  count: 6
+  count: 100
   gunShootCnotrol: 1
   controller: {fileID: 897275054}
 --- !u!4 &771643995 stripped
@@ -2042,7 +2047,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -687532966275245066, guid: f5a1bb1bf8641274c88db4c73f943ae4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f5a1bb1bf8641274c88db4c73f943ae4, type: 3}
 --- !u!4 &783897244 stripped
 Transform:
@@ -2614,7 +2620,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -687532966275245066, guid: f5a1bb1bf8641274c88db4c73f943ae4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f5a1bb1bf8641274c88db4c73f943ae4, type: 3}
 --- !u!1 &1165819111
 GameObject:
@@ -2794,7 +2801,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -687532966275245066, guid: f5a1bb1bf8641274c88db4c73f943ae4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f5a1bb1bf8641274c88db4c73f943ae4, type: 3}
 --- !u!4 &1169579799 stripped
 Transform:
@@ -2861,7 +2869,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -687532966275245066, guid: f5a1bb1bf8641274c88db4c73f943ae4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f5a1bb1bf8641274c88db4c73f943ae4, type: 3}
 --- !u!4 &1210430693 stripped
 Transform:
@@ -3439,7 +3448,7 @@ GameObject:
   - component: {fileID: 1553026367}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3742,7 +3751,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -687532966275245066, guid: f5a1bb1bf8641274c88db4c73f943ae4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f5a1bb1bf8641274c88db4c73f943ae4, type: 3}
 --- !u!4 &1608001012 stripped
 Transform:
@@ -4562,7 +4572,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -687532966275245066, guid: f5a1bb1bf8641274c88db4c73f943ae4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f5a1bb1bf8641274c88db4c73f943ae4, type: 3}
 --- !u!4 &1944773308 stripped
 Transform:
@@ -5200,7 +5211,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: HorrorDoll
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5593124672899456471, guid: bdbfd5713f226a243bea5cd0d17d2302, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bdbfd5713f226a243bea5cd0d17d2302, type: 3}
 --- !u!1001 &6685112479400030385
 PrefabInstance:
