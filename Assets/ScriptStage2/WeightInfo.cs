@@ -5,7 +5,7 @@ using UnityEngine;
 public class WeightInfo : MonoBehaviour
 {
     StageManager2 Manager;
-    ScaleRotate Speed;
+    ScaleRotate ScaleRot;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +16,7 @@ public class WeightInfo : MonoBehaviour
     void Update()
     {
         Manager = FindObjectOfType<StageManager2>();
-        Speed = FindObjectOfType<ScaleRotate>();
+        ScaleRot = FindObjectOfType<ScaleRotate>();
         if (Manager.DestroyWeight)
         {
             Destroy(gameObject);

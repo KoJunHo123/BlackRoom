@@ -18,6 +18,7 @@ public class ScaleRotate : MonoBehaviour
     float UpDownInfo;
     float LRInfo;
     float timer = 0f;
+    bool Lock;
     // Start is called before the first frame update
     void Start()
     {
@@ -67,6 +68,11 @@ public class ScaleRotate : MonoBehaviour
 
     public void LeftHeavy()
     {
+        if (!Lock)
+        {
+            gameObject.GetComponent<AudioSource>().Play();
+            Lock = true;
+        }
         Vector3 Delta = LeftScale.transform.position;
         Stick.transform.Rotate(0, 0, Time.deltaTime * speed);
         LeftScale.transform.position = Vector3.Lerp(LeftScale.transform.position, new Vector3(LeftScale.transform.position.x + LRdelta, LeftScale.transform.position.y - UpDowndelta, LeftScale.transform.position.z), speed * Time.deltaTime * 0.1f);
@@ -78,12 +84,20 @@ public class ScaleRotate : MonoBehaviour
         {
             speed = 0;
             timer += Time.deltaTime;
-            if(timer > 5.0f)
+            if (timer > 3.0f)
+            {
                 LeftEnd = true;
+                Lock = false;
+            }
         }
     }
     public void RightHeavy()
     {
+        if (!Lock)
+        {
+            gameObject.GetComponent<AudioSource>().Play();
+            Lock = true;
+        }
         Vector3 Delta = LeftScale.transform.position;
         Stick.transform.Rotate(0, 0, -Time.deltaTime * speed);
         LeftScale.transform.position = Vector3.Lerp(LeftScale.transform.position, new Vector3(LeftScale.transform.position.x - LRdelta, LeftScale.transform.position.y + UpDowndelta, LeftScale.transform.position.z), speed * Time.deltaTime * 0.1f);
@@ -95,8 +109,11 @@ public class ScaleRotate : MonoBehaviour
         {
             speed = 0;
             timer += Time.deltaTime;
-            if (timer > 5.0f)
+            if (timer > 3.0f)
+            {
                 RightEnd = true;
+                Lock = false;
+            }
         }
     }
 }

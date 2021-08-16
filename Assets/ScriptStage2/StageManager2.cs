@@ -13,6 +13,8 @@ public class StageManager2 : MonoBehaviour
     [SerializeField] GameObject Explain;
     [SerializeField] GameObject Clear;
     [SerializeField] GameObject Over;
+    [SerializeField] AudioSource Answer;
+    [SerializeField] AudioSource Wrong;
     MakeWeight MakeWeight;
     int UsingScale = 2;
     int ClearCount = 3;
@@ -49,6 +51,8 @@ public class StageManager2 : MonoBehaviour
         {
             Explain.SetActive(false);
             Over.SetActive(true);
+            RemainClear.gameObject.SetActive(false);
+            RemainUse.gameObject.SetActive(false);
         }
         
     }
@@ -87,22 +91,25 @@ public class StageManager2 : MonoBehaviour
         {
             ClearCount--;
             RemainClear.text = "Remain Clear: " + ClearCount;
-            
+            Answer.GetComponent<AudioSource>().Play();
+
             if (ClearCount > 0)
             {
                 DestroyWeight = true;
                 Invoke("StageSet", 3.0f);
-                    GetClear.isAnswer = false;
-            } 
+                GetClear.isAnswer = false;
+            }
             else
             {
                 GameClear = true;
             }
         }
-        else { GameOver = true; } //정답존에 오답을 올리고 버튼이 호출되면 게임오버 연출
-            
+        else
+        {
+            Wrong.GetComponent<AudioSource>().Play();
+            GameOver = true;
+        }
     }
-
     void StageSet()
     {
         MakeWeight = FindObjectOfType<MakeWeight>();
