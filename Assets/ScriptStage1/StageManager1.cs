@@ -16,7 +16,7 @@ public class StageManager1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void MoveTriggerChange()
     {
@@ -30,4 +30,20 @@ public class StageManager1 : MonoBehaviour
             Table.buttonPressed = true;
         }
     }
+
+    public void TeleportTriggerChange()
+    {
+        if(Table.teleportButton == true)
+        {
+            Table.teleportButton = false;
+            return;
+        }
+        if(Table.teleportButton == false)
+        {
+            Table.teleportButton = true;
+            return;
+        }
+    }
+    
+
 }
