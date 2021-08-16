@@ -6,7 +6,6 @@ public class ObjectSetting : MonoBehaviour
 {
     public bool SameOrDiff; //true:같은물체 false:다른물체
     StageManager4 StageManager;
-    ScaleRotate ScaleState;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,11 +21,13 @@ public class ObjectSetting : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         StageManager = FindObjectOfType<StageManager4>();
-        ScaleState = FindObjectOfType<ScaleRotate>();
-        if (other.gameObject.tag == "bullet")
+        if (other.gameObject.tag == "Bullet")
         {
+
+            Debug.Log("맞음123123a");
             if (SameOrDiff == false)
             {
+                Debug.Log("맞음");
                 StageManager.count--;
                 Destroy(gameObject);
             }
