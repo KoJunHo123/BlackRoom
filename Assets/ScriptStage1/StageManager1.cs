@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StageManager1 : MonoBehaviour
 {
     [SerializeField] GameObject FadeIn;
+    [SerializeField] Image FadeOut;
     TableMove Table;
+    CheckEndPoint CheckEnd;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +19,11 @@ public class StageManager1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        CheckEnd = FindObjectOfType<CheckEndPoint>();
+        if (CheckEnd.GameOver)
+        {
+            FadeOut.gameObject.SetActive(true);
+        }
     }
     public void MoveTriggerChange()
     {
