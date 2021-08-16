@@ -8,11 +8,11 @@ public class CheckStartPoint : MonoBehaviour
     [SerializeField] GameObject Sheep;
     [SerializeField] GameObject Glass;
     [SerializeField] GameObject Player;
-    bool WolfinPoint;
-    bool SheepinPoint;
-    bool GlassinPoint;
-    bool PlayerinPoint;
-    bool GameOver;
+    CheckEndPoint CheckEnd;
+    bool WolfinPoint=true;
+    bool SheepinPoint= true;
+    bool GlassinPoint= true;
+    bool PlayerinPoint= true;
 
     // Start is called before the first frame update
     void Start()
@@ -23,34 +23,32 @@ public class CheckStartPoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!PlayerinPoint)
-            GameOver = CheckGameOver();
-
-        if (GameOver)
-            Debug.Log("GameOver");
+        CheckEnd = FindObjectOfType<CheckEndPoint>();
+        if (!PlayerinPoint && !CheckEnd.GameOver)
+            CheckEnd.GameOver = CheckGameOver();
 
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.name == Wolf.name)
+        if (other.gameObject.tag == "Tiger")
             WolfinPoint = false;
-        if (other.gameObject.name == Sheep.name)
+        if (other.gameObject.tag == "Sheep")
             SheepinPoint = false;
-        if (other.gameObject.name == Glass.name)
+        if (other.gameObject.tag == "Glass")
             GlassinPoint = false;
-        if (other.gameObject.name == Player.name)
+        if (other.gameObject.tag == "Player")
             PlayerinPoint = false;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == Wolf.name)
+        if (other.gameObject.tag == "Tiger")
             WolfinPoint = true;
-        if (other.gameObject.name == Sheep.name)
+        if (other.gameObject.tag == "Sheep")
             SheepinPoint = true;
-        if (other.gameObject.name == Glass.name)
+        if (other.gameObject.tag == "Glass")
             GlassinPoint = true;
-        if (other.gameObject.name == Player.name)
+        if (other.gameObject.tag == "Player")
             PlayerinPoint = true;
 
     }

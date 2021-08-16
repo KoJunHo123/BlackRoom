@@ -9,6 +9,9 @@ TagManager:
   - Wrong
   - Answer
   - Bullet
+  - Tiger
+  - Sheep
+  - Glass
   layers:
   - Default
   - TransparentFX
