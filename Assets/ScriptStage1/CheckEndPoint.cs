@@ -67,6 +67,10 @@ public class CheckEndPoint : MonoBehaviour
             return true;
         else if (SheepinPoint && GlassinPoint)
             return true;
+        else if (WolfinPoint && !GlassinPoint && !SheepinPoint)
+            return true;
+        else if (GlassinPoint && !WolfinPoint && !SheepinPoint)
+            return true;
         else return false;
     }
 
