@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 using UnityEngine.UI;
 
 public class Sword : MonoBehaviour
@@ -9,6 +8,12 @@ public class Sword : MonoBehaviour
     public LayerMask AnswerLayer;
     public LayerMask WrongLayer;
     StageManager5 stage5;
+
+    [SerializeField] ParticleSystem hitAnswerParticle;
+    [SerializeField] ParticleSystem hitWrongParticle;
+
+    [SerializeField] GameObject AnswerAudioPlayer;
+    [SerializeField] GameObject WrongAudioPlayer;
 
     void Start()
     {
@@ -25,18 +30,16 @@ public class Sword : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.forward, out hit, 2, AnswerLayer))
         {
             Destroy(hit.transform.gameObject);
+            Instantiate(hitAnswerParticle, hit.transform.position, Quaternion.LookRotation(hit.normal));
+            Instantiate(AnswerAudioPlayer);
         }
         else if(Physics.Raycast(transform.position, transform.forward, out hit, 2, WrongLayer))
         {
             Destroy(hit.transform.gameObject);
             stage5.GameOver = true;
+            Instantiate(hitWrongParticle, hit.transform.position, Quaternion.LookRotation(hit.normal));
+            Instantiate(AnswerAudioPlayer);
         }
     }
 }
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    Manager = FindObjectOfType<StageManager5>();
-    //    if (other.gameObject.tag == "Answer")
-    //        Destroy(other);
-    //    else Manager.GameOver = true;
-    //}
+    

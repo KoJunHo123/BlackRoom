@@ -2276,23 +2276,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 435414, guid: 4c0fd8ec01100a94d9d1827a19a50eb1, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.64050853
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 435414, guid: 4c0fd8ec01100a94d9d1827a19a50eb1, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.2995811
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 435414, guid: 4c0fd8ec01100a94d9d1827a19a50eb1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.2995811
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 435414, guid: 4c0fd8ec01100a94d9d1827a19a50eb1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.64050853
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 435414, guid: 4c0fd8ec01100a94d9d1827a19a50eb1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -50.133
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 435414, guid: 4c0fd8ec01100a94d9d1827a19a50eb1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -2303,9 +2303,25 @@ PrefabInstance:
       value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 3106903437625687290, guid: 4c0fd8ec01100a94d9d1827a19a50eb1, type: 3}
+      propertyPath: WrongAudioPlayer
+      value: 
+      objectReference: {fileID: 7840322355119669539, guid: db1b1da9a79654b47a58d2a96cd557c9, type: 3}
+    - target: {fileID: 3106903437625687290, guid: 4c0fd8ec01100a94d9d1827a19a50eb1, type: 3}
+      propertyPath: hitWrongParticle
+      value: 
+      objectReference: {fileID: 198090597041805642, guid: d5f26854a8904624c8073139cd2eb346, type: 3}
+    - target: {fileID: 3106903437625687290, guid: 4c0fd8ec01100a94d9d1827a19a50eb1, type: 3}
+      propertyPath: AnswerAudioPlayer
+      value: 
+      objectReference: {fileID: 7931314826791626620, guid: 854d66d3051d0284ea12148a42479726, type: 3}
+    - target: {fileID: 3106903437625687290, guid: 4c0fd8ec01100a94d9d1827a19a50eb1, type: 3}
       propertyPath: WrongLayer.m_Bits
       value: 128
       objectReference: {fileID: 0}
+    - target: {fileID: 3106903437625687290, guid: 4c0fd8ec01100a94d9d1827a19a50eb1, type: 3}
+      propertyPath: hitAnswerParticle
+      value: 
+      objectReference: {fileID: 198090597041805642, guid: d5f26854a8904624c8073139cd2eb346, type: 3}
     - target: {fileID: 3106903437625687290, guid: 4c0fd8ec01100a94d9d1827a19a50eb1, type: 3}
       propertyPath: AnswerLayer.m_Bits
       value: 64
@@ -2563,7 +2579,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7739903411577186778, guid: af2a4de42b58f694e8366c7f7a72c6fa, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1.456
       objectReference: {fileID: 0}
     - target: {fileID: 7739903411577186778, guid: af2a4de42b58f694e8366c7f7a72c6fa, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2915,6 +2931,10 @@ PrefabInstance:
     - target: {fileID: 5557742859100092650, guid: a7812b1b938e350408638506db22e0ac, type: 3}
       propertyPath: m_Name
       value: BGM
+      objectReference: {fileID: 0}
+    - target: {fileID: 6351507223459921261, guid: a7812b1b938e350408638506db22e0ac, type: 3}
+      propertyPath: Loop
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6351507223459921261, guid: a7812b1b938e350408638506db22e0ac, type: 3}
       propertyPath: m_audioClip
