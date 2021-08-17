@@ -9,7 +9,6 @@ public class ObjectSetting : MonoBehaviour
     StageManager4 StageManager;
 
     [SerializeField] GameObject GhostAudioPlayer;
-
     [SerializeField] ParticleSystem hitParticlePrefab;
     // Start is called before the first frame update
     void Start()
@@ -20,7 +19,7 @@ public class ObjectSetting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)

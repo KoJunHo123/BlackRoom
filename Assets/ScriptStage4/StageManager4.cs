@@ -8,22 +8,39 @@ public class StageManager4 : MonoBehaviour
 {
     [SerializeField] Transform[] SpawnPosition; //파란 방의 오브젝트 좌표, 개수지정 가능
     [SerializeField] GameObject[] ObjectPrefabs; //좌표에 생길 오브젝트 프리팹
+    [SerializeField] Text RemainCount;
+    [SerializeField] GameObject Player;
+    [SerializeField] GameObject FadeIn;
+    [SerializeField] GameObject FadeOut_GameOver;
+    [SerializeField] GameObject GameOverText;
     public int count;
     public bool GameOver;
     public bool GameClear;
+    float timer = 0;
+    
     // Start is called before the first frame update
     void Start()
     {
+        FadeIn.SetActive(true);
         SpawnObject();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (GameOver) ; //게임오버 구현
+        if (GameOver)
+        {
+            timer += Time.deltaTime;
+            GameOverText.SetActive(true);
+            if(timer>5.0f)
+            Player.AddComponent<Rigidbody>();
+            if (timer > 7.0f)
+                SceneManager.LoadScene("GameOver");
+        }
+
         if (GameClear)
             ClearGame();
-
+        RemainCount.text = "Remain Monster: " + count;
     }
 
     public void SpawnObject()
@@ -68,6 +85,9 @@ public class StageManager4 : MonoBehaviour
                  }
                  else i--;
              }
+
+            if (count == 0 && i == Index-1)
+                i--;
          }    
 
     }
