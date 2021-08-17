@@ -30,20 +30,17 @@ public class GetAnswer : MonoBehaviour
             if (countAnswer < 2)
             { 
                 countAnswer++;
-                Debug.Log("아직덜깸" + countAnswer);
-                Answer.testTrigger = true;
+                Answer.Lock = false;
             }
             else if(countAnswer >= 2)
             {
                 StageClear = true;
-                Debug.Log("깸");
             }
 
         }
         else
         {
             GameOver = true;
-            Debug.Log("왼쪽틀림"); //실패시 연출 작성할것
         }
     }
     public void isAnswerRight()
@@ -55,20 +52,17 @@ public class GetAnswer : MonoBehaviour
             if (countAnswer < 2)
             {
                 countAnswer++;
-                Debug.Log("아직덜깸" + countAnswer);
-                Answer.testTrigger = true;
+                Answer.Lock = false;
             }
             else if (countAnswer >= 2)
             {
                 StageClear = true;
-                Debug.Log("깸");
             }
 
         }
         else
         {
-            GameOver = true;
-            Debug.Log("오른쪽틀림"); //실패시 연출 작성할것
+            GameOver = true; //실패시 연출 작성할것
         }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class HatColor : MonoBehaviour
 {
     [SerializeField] public Renderer[] HatPrepab;
-    public bool testTrigger = false;
+    public bool Lock = false;
     ImageManager image;
     // Start is called before the first frame update
     void Start()
@@ -16,7 +16,7 @@ public class HatColor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (testTrigger)
+        if (!Lock)
         {
             image = FindObjectOfType<ImageManager>();
             SelectHatColor(HatPrepab);
@@ -36,7 +36,7 @@ public class HatColor : MonoBehaviour
         {
             Hat[0].material.color = Hat[1].material.color = new Color(Random.Range(0, 1f), Random.Range(0, 1f), Random.Range(0, 1f));
         }
-        testTrigger = false;
+        Lock = true;
 
     }
 }

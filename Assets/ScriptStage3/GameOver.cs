@@ -5,7 +5,12 @@ using UnityEngine.SceneManagement;
 //스테이지 클리어 실패 시 연출 작성
 public class GameOver : MonoBehaviour
 {
-    GetAnswer Over; //사용시  Over = FindObjectOfType<GetAnswer>(); 작성 후 사용
+    [SerializeField] GameObject FadeOut_GameOver;
+    [SerializeField] GameObject Player;
+    [SerializeField] GameObject GameOverText;
+    GetAnswer Over;
+    float timer;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +19,22 @@ public class GameOver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Over = FindObjectOfType<GetAnswer>();
+        if (Over.GameOver)
+        {
+            timer += Time.deltaTime;
+            GameOverText.SetActive(true);
+            if (timer > 3.0f)
+            {
+                FadeOut_GameOver.SetActive(true);
+                Player.AddComponent<Rigidbody>();
+            }
+
+            if (timer > 7.0f)
+                SceneManager.LoadScene("GameOver");
+        }
+
     }
+
+
 }

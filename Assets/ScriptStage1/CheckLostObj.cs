@@ -18,7 +18,6 @@ public class CheckLostObj : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("d");
         CheckEnd = FindObjectOfType<CheckEndPoint>();
         Destroy(other.gameObject);
         CheckEnd.GameOver = true;
