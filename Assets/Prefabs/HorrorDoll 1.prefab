@@ -48,8 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SameOrDiff: 1
-  GhostAudioPlayer: {fileID: -7239079559525326357}
-  screamClip: {fileID: 8300000, guid: 3052159cb8ee19b46ab9e30a108913ac, type: 3}
+  GhostAudioPlayer: {fileID: 775123348152232376, guid: 79db005944ebac741bd71e2b0233cf69, type: 3}
   hitParticlePrefab: {fileID: 198154877614836784, guid: 529eb4216865eba419c1a4a68d0b0388, type: 3}
 --- !u!54 &-7390607454264419963
 Rigidbody:

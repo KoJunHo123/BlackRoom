@@ -8,8 +8,7 @@ public class ObjectSetting : MonoBehaviour
     public bool SameOrDiff; //true:같은물체 false:다른물체
     StageManager4 StageManager;
 
-    public AudioSource GhostAudioPlayer;
-    public AudioClip screamClip;
+    [SerializeField] GameObject GhostAudioPlayer;
 
     [SerializeField] ParticleSystem hitParticlePrefab;
     // Start is called before the first frame update
@@ -32,11 +31,10 @@ public class ObjectSetting : MonoBehaviour
             if (SameOrDiff == false)
             {
                 StageManager.count--;
+                Instantiate(hitParticlePrefab, transform.position, transform.rotation);
+                Instantiate(GhostAudioPlayer);
                 Destroy(other);
                 Destroy(gameObject);
-                Instantiate(hitParticlePrefab, transform.position, transform.rotation);
-                GhostAudioPlayer.clip = screamClip;
-                GhostAudioPlayer.Play();
             }
             else StageManager.GameOver = true;
         }

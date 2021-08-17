@@ -23,8 +23,7 @@ public class RightCheckMass : MonoBehaviour
         Speed = FindObjectOfType<ScaleRotate>();
         if (other.gameObject.tag == "Answer")
             Mass += 9;
-        else Mass += 10; if (Speed.speed <= 0)
-            other.gameObject.transform.position = -Vector3.forward / 10f;
+        else Mass += 10;
     }
     private void OnTriggerExit(Collider other)
     {

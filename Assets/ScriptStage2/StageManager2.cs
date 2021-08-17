@@ -21,7 +21,7 @@ public class StageManager2 : MonoBehaviour
     AnswerPlate GetClear;
     public bool GameClear;
     public bool GameOver;
-    public bool Lock;
+    public bool Lock =false;
     public bool DestroyWeight;
     public float timer=0;
     // Start is called before the first frame update
@@ -41,7 +41,6 @@ public class StageManager2 : MonoBehaviour
         if (GameClear)
         {
             Explain.SetActive(false);
-            float timer = 0;
             timer += Time.deltaTime;
             Clear.SetActive(true);
             if (timer > 5.0f)
@@ -64,6 +63,7 @@ public class StageManager2 : MonoBehaviour
             Lock = true;
             if (UsingScale > 0)
             {
+                UsingScale--;
                 RightCheckMass Right = FindObjectOfType<RightCheckMass>();
                 LeftCheckMass Left = FindObjectOfType<LeftCheckMass>();
                 ScaleRotate ScaleControll = FindObjectOfType<ScaleRotate>();
@@ -76,7 +76,11 @@ public class StageManager2 : MonoBehaviour
                 {
                     ScaleControll.isRightHeavy = true;
                 }
-                UsingScale--;
+                else
+                {
+                    gameObject.GetComponent<AudioSource>().Play();
+                    Lock = false;
+                }
                 RemainUse.text = "Remain use: " + UsingScale;
 
             }
