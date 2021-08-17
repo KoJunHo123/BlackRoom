@@ -10,10 +10,10 @@ public class CheckEndPoint : MonoBehaviour
     [SerializeField] GameObject Player;
     [SerializeField] GameObject XRrig;
     [SerializeField] GameObject floor;
-    bool WolfinPoint;
-    bool SheepinPoint;
-    bool GlassinPoint;
-    bool PlayerinPoint;
+    public bool WolfinPoint = false;
+    public bool SheepinPoint = false;
+    public bool GlassinPoint = false;
+    public bool PlayerinPoint = false;
     public bool GameOver;
     float timer;
 
@@ -27,7 +27,10 @@ public class CheckEndPoint : MonoBehaviour
     void Update()
     {
         if (!PlayerinPoint && !GameOver)
+        {
             GameOver = CheckGameOver();
+            Debug.Log("Endif");
+        }
 
         if (WolfinPoint && SheepinPoint && GlassinPoint && PlayerinPoint) SceneManager.LoadScene(2) ;
         //게임 클리어 
@@ -63,13 +66,10 @@ public class CheckEndPoint : MonoBehaviour
 
     bool CheckGameOver()
     {
+        Debug.Log("End");
         if (WolfinPoint && SheepinPoint)
             return true;
         else if (SheepinPoint && GlassinPoint)
-            return true;
-        else if (WolfinPoint && !GlassinPoint && !SheepinPoint)
-            return true;
-        else if (GlassinPoint && !WolfinPoint && !SheepinPoint)
             return true;
         else return false;
     }

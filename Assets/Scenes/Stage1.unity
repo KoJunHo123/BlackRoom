@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0039957035, g: 0.00021792634, b: 0.000000051515347, a: 1}
+  m_IndirectSpecularColor: {r: 0.003995701, g: 0.0002179261, b: 0.000000051515347, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1236,7 +1236,11 @@ MonoBehaviour:
   Wolf: {fileID: 1371193068}
   Sheep: {fileID: 619891296}
   Glass: {fileID: 1467901106}
-  Player: {fileID: 868070866}
+  Player: {fileID: 1591673940}
+  WolfinPoint: 1
+  SheepinPoint: 1
+  GlassinPoint: 1
+  PlayerinPoint: 1
 --- !u!1001 &738691940
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1434,11 +1438,6 @@ CanvasRenderer:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7565581966879273008, guid: 9365fb747ed93824ba7d9f4eeb5e30e8, type: 3}
   m_PrefabInstance: {fileID: 2118156714}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &868070866 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4730732023953967868, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
-  m_PrefabInstance: {fileID: 4730732024181751598}
   m_PrefabAsset: {fileID: 0}
 --- !u!20 &868070870 stripped
 Camera:
@@ -1813,9 +1812,13 @@ MonoBehaviour:
   Wolf: {fileID: 1716013329}
   Sheep: {fileID: 619891296}
   Glass: {fileID: 1467901106}
-  Player: {fileID: 868070866}
+  Player: {fileID: 1591673940}
   XRrig: {fileID: 1591673940}
   floor: {fileID: 687921875}
+  WolfinPoint: 0
+  SheepinPoint: 0
+  GlassinPoint: 0
+  PlayerinPoint: 0
   GameOver: 0
 --- !u!1 &1097396792
 GameObject:
@@ -2628,6 +2631,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1591673943
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591673940}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1716013329 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100690, guid: 0faaca137bc5a794098e6b71f8bb22f6, type: 3}
@@ -3072,6 +3088,10 @@ PrefabInstance:
     - target: {fileID: 4730732025192878013, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
       propertyPath: m_Name
       value: XR Rig
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730732025192878013, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}

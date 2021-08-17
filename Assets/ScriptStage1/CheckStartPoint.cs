@@ -9,10 +9,10 @@ public class CheckStartPoint : MonoBehaviour
     [SerializeField] GameObject Glass;
     [SerializeField] GameObject Player;
     CheckEndPoint CheckEnd;
-    bool WolfinPoint=true;
-    bool SheepinPoint= true;
-    bool GlassinPoint= true;
-    bool PlayerinPoint= true;
+    public bool WolfinPoint=true;
+    public bool SheepinPoint = true;
+    public bool GlassinPoint = true;
+    public bool PlayerinPoint = true;
 
     // Start is called before the first frame update
     void Start()
@@ -25,9 +25,12 @@ public class CheckStartPoint : MonoBehaviour
     {
         CheckEnd = FindObjectOfType<CheckEndPoint>();
         if (!PlayerinPoint && !CheckEnd.GameOver)
+        {
             CheckEnd.GameOver = CheckGameOver();
+            Debug.Log("Startif");
+        }
 
-    }
+        }
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Tiger")
@@ -37,7 +40,10 @@ public class CheckStartPoint : MonoBehaviour
         if (other.gameObject.tag == "Glass")
             GlassinPoint = false;
         if (other.gameObject.tag == "Player")
+        {
             PlayerinPoint = false;
+            Debug.Log("1");
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -49,12 +55,17 @@ public class CheckStartPoint : MonoBehaviour
         if (other.gameObject.tag == "Glass")
             GlassinPoint = true;
         if (other.gameObject.tag == "Player")
+        {
             PlayerinPoint = true;
+            Debug.Log("3");
+        }
+
 
     }
 
     bool CheckGameOver()
     {
+        Debug.Log("Start");
         if (WolfinPoint && SheepinPoint)
             return true;
         else if (SheepinPoint && GlassinPoint)
