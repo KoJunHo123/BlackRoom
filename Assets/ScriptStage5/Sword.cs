@@ -22,11 +22,11 @@ public class Sword : MonoBehaviour
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 1, AnswerLayer))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 2, AnswerLayer))
         {
             Destroy(hit.transform.gameObject);
         }
-        else if(Physics.Raycast(transform.position, transform.forward, out hit, 1, WrongLayer))
+        else if(Physics.Raycast(transform.position, transform.forward, out hit, 2, WrongLayer))
         {
             Destroy(hit.transform.gameObject);
             stage5.GameOver = true;

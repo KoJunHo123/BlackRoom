@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    [SerializeField] Transform SpawnPostion;
+    [SerializeField] Transform[] SpawnPostion;
     [SerializeField] GameObject AnswerGhost;
     [SerializeField] GameObject WrongGhost;
     QuizInfo data;
@@ -13,7 +13,7 @@ public class Spawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -29,10 +29,10 @@ public class Spawn : MonoBehaviour
         if (Manager.i > 1)
         {
             if (data.Question[Manager.i] == data.Question[Manager.i - 2])
-                Instantiate(AnswerGhost, SpawnPostion);
+                Instantiate(AnswerGhost, SpawnPostion[Random.Range(0, 2)]);
             else
             {
-                Instantiate(WrongGhost, SpawnPostion);
+                Instantiate(WrongGhost, SpawnPostion[Random.Range(0,2)]);
                 WrongCount++;
             }
         }

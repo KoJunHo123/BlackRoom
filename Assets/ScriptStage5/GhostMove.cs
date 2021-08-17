@@ -16,4 +16,5 @@ public class GhostMove : MonoBehaviour
     {
         transform.Translate(-Vector3.forward * Time.deltaTime * speed);
     }
+    
 }
