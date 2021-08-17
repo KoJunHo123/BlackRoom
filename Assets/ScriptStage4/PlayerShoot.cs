@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR;
+using UnityEngine.UI;
 
 
 public class PlayerShoot : MonoBehaviour
@@ -10,6 +11,11 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] Transform GunMuzzle;
     [SerializeField] GameObject Bullet;
     public Animator m_Animator;
+    public ParticleSystem MuzzleEffect;
+
+    public AudioSource GunAudioPlayer;
+
+    public AudioClip ShotClip;
 
     public float time;
     public float count = 6;
@@ -44,6 +50,14 @@ public class PlayerShoot : MonoBehaviour
     {
         if (gunShootCnotrol == true)
         {
+            MuzzleEffect.Play();
+            if(GunAudioPlayer.clip != ShotClip)
+            {
+                GunAudioPlayer.clip = ShotClip;
+            }
+
+            GunAudioPlayer.Play();
+
             Instantiate(Bullet, GunMuzzle.position,GunMuzzle.rotation);
             count--;
             m_Animator.SetTrigger("Shot1");
