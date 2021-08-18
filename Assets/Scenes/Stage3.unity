@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.003995701, g: 0.0002179261, b: 0.000000051515347, a: 1}
+  m_IndirectSpecularColor: {r: 0.003995703, g: 0.00021792634, b: 0.000000051515347, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -127,6 +127,11 @@ NavMeshSettings:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000011829215070, guid: 0a36d45e1b007e14b884de828f3b6938, type: 3}
   m_PrefabInstance: {fileID: 1864941302}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &122383494 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6351507223459921261, guid: a7812b1b938e350408638506db22e0ac, type: 3}
+  m_PrefabInstance: {fileID: 872249696}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &185860386 stripped
 GameObject:
@@ -382,6 +387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 747911254c0081a4f96ac2f4a19222a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 0
   speed: 3
 --- !u!114 &248046918
 MonoBehaviour:
@@ -4801,6 +4807,7 @@ MonoBehaviour:
   FadeOut_GameOver: {fileID: 686145863}
   Player: {fileID: 1170567315}
   GameOverText: {fileID: 248046915}
+  BGM: {fileID: 122383494}
 --- !u!1 &1040280262
 GameObject:
   m_ObjectHideFlags: 0

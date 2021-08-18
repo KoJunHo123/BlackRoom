@@ -10,6 +10,7 @@ public class CheckEndPoint : MonoBehaviour
     [SerializeField] GameObject Player;
     [SerializeField] GameObject XRrig;
     [SerializeField] GameObject floor;
+    [SerializeField] AudioSource BGM;
     public bool WolfinPoint = false;
     public bool SheepinPoint = false;
     public bool GlassinPoint = false;
@@ -86,6 +87,7 @@ public class CheckEndPoint : MonoBehaviour
         floor.GetComponent<BoxCollider>().isTrigger = true;
         XRrig.GetComponent<Rigidbody>().isKinematic= false;
         XRrig.GetComponent<Rigidbody>().useGravity = true;
+        BGM.pitch -= 1f * (Time.deltaTime / 5f);
         if (timer > 5f)
             SceneManager.LoadScene("GameOver");
     }

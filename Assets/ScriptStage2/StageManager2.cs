@@ -17,6 +17,7 @@ public class StageManager2 : MonoBehaviour
     [SerializeField] AudioSource Wrong;
     [SerializeField] GameObject Player;
     [SerializeField] GameObject FadeOut;
+    [SerializeField] AudioSource BGM;
     MakeWeight MakeWeight;
     int UsingScale = 2;
     int ClearCount = 3;
@@ -56,6 +57,7 @@ public class StageManager2 : MonoBehaviour
             RemainUse.gameObject.SetActive(false);
             PlayerPrefs.SetInt("NowStage", 2);
             Over.SetActive(true);
+            BGM.pitch -= 1f * (Time.deltaTime / 6f);
             if (Over.GetComponent<GameOverMove>().timer > 3.0f)
             {
                 SceneTimer += Time.deltaTime;

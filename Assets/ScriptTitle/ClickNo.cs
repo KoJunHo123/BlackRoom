@@ -46,12 +46,6 @@ public class ClickNo : MonoBehaviour
                 FadeOutPanel.SetActive(true);
                 Title.SetActive(false);
             }
-            if (delta > 5.5f)
-            {
-                Destroy(text1);
-                Destroy(text2);
-                Destroy(text3);
-            }
         }
 
         if (FadeOutPanel.gameObject.GetComponent<Image>().color.a > 0.99f)

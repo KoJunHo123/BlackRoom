@@ -2872,6 +2872,7 @@ MonoBehaviour:
   FadeIn: {fileID: 393985064}
   FadeOut_GameOver: {fileID: 1509209732}
   GameOverText: {fileID: 287773576}
+  BGM: {fileID: 1350786792}
   count: 0
   GameOver: 0
   GameClear: 0
@@ -3408,6 +3409,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 212c9e6e25b744146a026d29f0ba9d26, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7812b1b938e350408638506db22e0ac, type: 3}
+--- !u!82 &1350786792 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6351507223459921261, guid: a7812b1b938e350408638506db22e0ac, type: 3}
+  m_PrefabInstance: {fileID: 1350786791}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1350989147
 PrefabInstance:
   m_ObjectHideFlags: 0

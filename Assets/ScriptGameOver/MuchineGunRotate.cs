@@ -17,6 +17,6 @@ public class MuchineGunRotate : MonoBehaviour
         
             transform.Rotate(new Vector3(0, 0, Time.deltaTime * speed));
         if(speed < 2000f)
-            speed *= 1.01f;
+            speed *= 1.04f;
     }
 }

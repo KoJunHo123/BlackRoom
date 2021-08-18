@@ -5,6 +5,9 @@ using UnityEngine;
 public class Roof : MonoBehaviour
 {
     [SerializeField] GameObject MachineGun;
+    bool intheroom;
+    float timer;
+    public float getTime; //머신건 발사 전 연출의 시간
     // Start is called before the first frame update
     void Start()
     {
@@ -14,13 +17,17 @@ public class Roof : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (intheroom)
+            timer += Time.deltaTime;
+        if (timer > getTime)
+            MachineGun.GetComponent<MuchineGunRotate>().enabled = true;
     }
     private void OnTriggerEnter(Collider other)
     {
         other.GetComponent<SphereCollider>().enabled = false;
         other.gameObject.AddComponent<BoxCollider>();
-        MachineGun.GetComponent<MuchineGunRotate>().enabled = true;
+        //MachineGun.GetComponent<MuchineGunRotate>().enabled = true;
+        intheroom = true;
     }
     private void OnTriggerStay(Collider other)
     {

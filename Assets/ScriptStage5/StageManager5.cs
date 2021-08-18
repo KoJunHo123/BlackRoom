@@ -6,6 +6,8 @@ public class StageManager5 : MonoBehaviour
 {
     [SerializeField] GameObject FadeIn;
     [SerializeField] AudioSource[] Number = new AudioSource[10];
+    //[SerializeField] AudioSource GameOverSound;
+
     Spawn spawn;
     QuizInfo data;
     float timer=0;
@@ -13,6 +15,8 @@ public class StageManager5 : MonoBehaviour
     public int i=0;
     public bool GameOver;
     public bool GameClear;
+    public bool GameStart;
+    int Index;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +26,19 @@ public class StageManager5 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-        if(timer > quizTerm)
-        PlayerQuiz();
+        if (GameStart && !GameOver)
+        {
+            timer += Time.deltaTime;
+            if (timer > quizTerm)
+            {
+                Number[Index].pitch = 1f;
+                PlayerQuiz();
+            }
+        }
+        if (GameOver)
+            gameObject.GetComponent<GetGameOver>().enabled = true;
+        if (GameClear)
+            Gameclear();
     }
 
     public void PlayerQuiz()
@@ -33,9 +47,13 @@ public class StageManager5 : MonoBehaviour
         spawn = FindObjectOfType<Spawn>();
         if ( i <  12)
         {
-            int Index = Random.Range(0, 10);
+            Index = Random.Range(0, 10);
             if (Random.Range(0, 100) > 66 && i >= 2)
+            {
                 Index = data.Question[i - 2];
+            }
+            if(Random.Range(0,100) > 80)
+            Number[Index].pitch = Random.Range(0.7f,2.5f);
             Number[Index].Play();
             Debug.Log(Index);
             data.Question[i] = Index;
@@ -46,13 +64,9 @@ public class StageManager5 : MonoBehaviour
         
     }
 
-    public void Gameover()
-    {
-        PlayerPrefs.SetInt("NowStage", 5);
-    }
-
     public void Gameclear()
     {
         PlayerPrefs.SetInt("NowStage", 0);
+        SceneManager.LoadScene("GameEnd");
     }
 }

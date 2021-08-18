@@ -13,6 +13,7 @@ public class StageManager4 : MonoBehaviour
     [SerializeField] GameObject FadeIn;
     [SerializeField] GameObject FadeOut_GameOver;
     [SerializeField] GameObject GameOverText;
+    [SerializeField] AudioSource BGM;
     public int count;
     public bool GameOver;
     public bool GameClear;
@@ -32,10 +33,14 @@ public class StageManager4 : MonoBehaviour
         if (GameOver)
         {
             timer += Time.deltaTime;
-            GameOverText.SetActive(true);
-            if(timer>5.0f)
-            Player.AddComponent<Rigidbody>();
             PlayerPrefs.SetInt("NowStage", 4);
+            BGM.pitch -= 1f * (Time.deltaTime / 12f);
+            GameOverText.SetActive(true);
+            if (timer > 5.0f)
+            { 
+                Player.AddComponent<Rigidbody>();
+                FadeOut_GameOver.SetActive(true);
+            }
             if (timer > 7.0f)
                 SceneManager.LoadScene("GameOver");
         }
@@ -73,7 +78,7 @@ public class StageManager4 : MonoBehaviour
                  int a = Random.Range(0, ObjectPrefabs.Length);
                  int b = Random.Range(0, SpawnPosition.Length);
                 int c = Random.Range(0, ObjectPrefabs.Length);
-                while (a==c) c = Random.Range(0, ObjectPrefabs.Length);
+                while (a == c) { c = Random.Range(0, ObjectPrefabs.Length); }
                 if (!isSpawn[b])
                 {
                     ObjectPrefabs[a].GetComponent<ObjectSetting>().SameOrDiff = false;
