@@ -17,7 +17,7 @@ public class ScreenFadeOut : MonoBehaviour
 
         if (Path.activeSelf == true)
         {
-            color = Color.white;
+            color = Color.black;
             color.a = 0.0f;
             Panelimage.color = color;
         }
@@ -33,7 +33,7 @@ public class ScreenFadeOut : MonoBehaviour
     void Update()
     {
         delta += Time.deltaTime;
-        color.a += Time.deltaTime / 2f;
+        color.a += Time.deltaTime / 3f;
         if (delta < 5f)
         {
             Panelimage.color = color;

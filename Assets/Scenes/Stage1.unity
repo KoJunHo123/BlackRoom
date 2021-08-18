@@ -834,6 +834,18 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5716990231687433905, guid: 64680f3106f529040a2d9d333a3e0188, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716990231687433905, guid: 64680f3106f529040a2d9d333a3e0188, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716990231687433905, guid: 64680f3106f529040a2d9d333a3e0188, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5716990231687433906, guid: 64680f3106f529040a2d9d333a3e0188, type: 3}
       propertyPath: m_LocalScale.x
       value: 10.7548
@@ -3098,14 +3110,26 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4730732023953967868, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 4730732024075307573, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1897062281}
+    - target: {fileID: 4730732024738327115, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 4730732024784560305, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1897062281}
+    - target: {fileID: 4730732024784560307, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 4730732024952431959, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
       propertyPath: m_InteractionManager
       value: 
@@ -3114,6 +3138,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1897062281}
+    - target: {fileID: 4730732025069052367, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 4730732025192878011, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
       propertyPath: m_RootOrder
       value: 2
