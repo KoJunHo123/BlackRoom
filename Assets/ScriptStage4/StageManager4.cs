@@ -81,10 +81,10 @@ public class StageManager4 : MonoBehaviour
                     Quaternion t = FlipObject.transform.rotation;
                     FlipObject.transform.rotation = Quaternion.Euler(t.x, t.y + 180f, t.z);
                     Instantiate(ObjectPrefabs[c], new Vector3(SpawnPosition[b].transform.position.x, SpawnPosition[b].transform.position.y, -SpawnPosition[b].transform.position.z), Quaternion.Euler(t.x, t.y + 180f, t.z));
-                    
+
                     isSpawn[b] = true;
-                 }
-                 else i--;
+                }
+                else { i--; count--; }
              }
 
             if (count == 0 && i == Index-1)

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameOverMove : MonoBehaviour
 {
-    float timer;
+    public float timer;
     public float speed;
     // Start is called before the first frame update
     void Start()

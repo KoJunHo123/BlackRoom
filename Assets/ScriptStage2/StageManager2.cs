@@ -15,6 +15,8 @@ public class StageManager2 : MonoBehaviour
     [SerializeField] GameObject Over;
     [SerializeField] AudioSource Answer;
     [SerializeField] AudioSource Wrong;
+    [SerializeField] GameObject Player;
+    [SerializeField] GameObject FadeOut;
     MakeWeight MakeWeight;
     int UsingScale = 2;
     int ClearCount = 3;
@@ -24,6 +26,7 @@ public class StageManager2 : MonoBehaviour
     public bool Lock =false;
     public bool DestroyWeight;
     public float timer=0;
+    float SceneTimer = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,10 +52,19 @@ public class StageManager2 : MonoBehaviour
         if(GameOver)
         {
             Explain.SetActive(false);
-            Over.SetActive(true);
             RemainClear.gameObject.SetActive(false);
             RemainUse.gameObject.SetActive(false);
             PlayerPrefs.SetInt("NowStage", 2);
+            Over.SetActive(true);
+            if (Over.GetComponent<GameOverMove>().timer > 3.0f)
+            {
+                SceneTimer += Time.deltaTime;
+                Player.AddComponent<Rigidbody>();
+                FadeOut.SetActive(true);
+                if (SceneTimer > 3.0f)
+                    SceneManager.LoadScene("GameOver");
+            }
+
         }
         
     }
