@@ -1015,6 +1015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 747911254c0081a4f96ac2f4a19222a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 0
   speed: 3
 --- !u!114 &287773579
 MonoBehaviour:
@@ -1155,8 +1156,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 19.701122, y: 6.822992, z: 0.25999773}
-  m_Center: {x: 0.50345993, y: 2.911496, z: 0.37000114}
+  m_Size: {x: 19.701122, y: 8.365993, z: 1.6117465}
+  m_Center: {x: 0.50345993, y: 3.6829977, z: 1.0458755}
 --- !u!4 &376263455
 Transform:
   m_ObjectHideFlags: 0
@@ -2437,33 +2438,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe1b63d21d56ace418395e7a2fa4fea0, type: 3}
---- !u!1 &810798108 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 144476, guid: 20d6fada1e8caa1488140d8433a67d6b, type: 3}
-  m_PrefabInstance: {fileID: 1949447430}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &810798110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810798108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9227d2553416dca438421c587ff77155, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GunMuzzle: {fileID: 0}
-  Bullet: {fileID: 0}
-  m_Animator: {fileID: 0}
-  MuzzleEffect: {fileID: 0}
-  GunAudioPlayer: {fileID: 0}
-  ShotClip: {fileID: 0}
-  time: 0
-  count: 6
-  gunShootCnotrol: 1
-  controller: {fileID: 0}
 --- !u!1 &897275049
 GameObject:
   m_ObjectHideFlags: 0
@@ -5905,6 +5879,18 @@ PrefabInstance:
     - target: {fileID: 5716990231687433905, guid: 64680f3106f529040a2d9d333a3e0188, type: 3}
       propertyPath: m_Color.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716990231687433905, guid: 64680f3106f529040a2d9d333a3e0188, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716990231687433905, guid: 64680f3106f529040a2d9d333a3e0188, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716990231687433905, guid: 64680f3106f529040a2d9d333a3e0188, type: 3}
+      propertyPath: m_Color.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5716990231687433906, guid: 64680f3106f529040a2d9d333a3e0188, type: 3}
       propertyPath: m_LocalScale.x

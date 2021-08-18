@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Roof : MonoBehaviour
 {
+    [SerializeField] GameObject MachineGun;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,7 @@ public class Roof : MonoBehaviour
     {
         other.GetComponent<SphereCollider>().enabled = false;
         other.gameObject.AddComponent<BoxCollider>();
-        //other.gameObject.GetComponent<BoxCollider>().center = new Vector3(0, 2, 0);
+        MachineGun.GetComponent<MuchineGunRotate>().enabled = true;
     }
     private void OnTriggerStay(Collider other)
     {
