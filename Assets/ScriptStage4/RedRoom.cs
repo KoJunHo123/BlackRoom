@@ -18,6 +18,6 @@ public class RedRoom : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Bullet")
-            Destroy(other);
+            Destroy(other.gameObject);
     }
 }

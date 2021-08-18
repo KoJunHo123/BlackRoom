@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScreenFadeOut : MonoBehaviour
 {
@@ -17,7 +18,10 @@ public class ScreenFadeOut : MonoBehaviour
 
         if (Path.activeSelf == true)
         {
-            color = Color.black;
+            if (SceneManager.GetActiveScene().name == "GameEnd")
+                color = Color.white;
+            else if(SceneManager.GetActiveScene().name == "Title")
+                color = Color.black;
             color.a = 0.0f;
             Panelimage.color = color;
         }

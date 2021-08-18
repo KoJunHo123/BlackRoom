@@ -28,6 +28,7 @@ public class StageManager4 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CheckGameState();
         if (GameOver)
         {
             timer += Time.deltaTime;
@@ -95,7 +96,7 @@ public class StageManager4 : MonoBehaviour
 
     public void CheckGameState()
     {
-        if (count == 0)
+        if (count <= 0)
             GameClear = true;
     }
     public void ClearGame()
