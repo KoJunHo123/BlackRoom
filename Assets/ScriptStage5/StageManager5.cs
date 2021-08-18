@@ -16,7 +16,7 @@ public class StageManager5 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       // FadeIn.SetActive(true);
+       FadeIn.SetActive(true);
     }
 
     // Update is called once per frame
