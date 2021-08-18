@@ -32,11 +32,17 @@ public class CheckEndPoint : MonoBehaviour
             Debug.Log("Endif");
         }
 
-        if (WolfinPoint && SheepinPoint && GlassinPoint && PlayerinPoint) SceneManager.LoadScene(2) ;
+        if (WolfinPoint && SheepinPoint && GlassinPoint && PlayerinPoint)
+        {
+            SceneManager.LoadScene(2);
+        }
         //게임 클리어 
 
         if (GameOver)
+        {
             SetGameOver();
+            PlayerPrefs.SetInt("NowStage", 1);
+        }
 
     }
     private void OnTriggerExit(Collider other)

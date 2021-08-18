@@ -34,6 +34,7 @@ public class StageManager4 : MonoBehaviour
             GameOverText.SetActive(true);
             if(timer>5.0f)
             Player.AddComponent<Rigidbody>();
+            PlayerPrefs.SetInt("NowStage", 4);
             if (timer > 7.0f)
                 SceneManager.LoadScene("GameOver");
         }

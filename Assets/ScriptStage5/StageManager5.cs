@@ -48,6 +48,11 @@ public class StageManager5 : MonoBehaviour
 
     public void Gameover()
     {
+        PlayerPrefs.SetInt("NowStage", 5);
+    }
 
+    public void Gameclear()
+    {
+        PlayerPrefs.SetInt("NowStage", 0);
     }
 }

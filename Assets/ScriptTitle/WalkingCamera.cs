@@ -8,7 +8,8 @@ public class WalkingCamera : MonoBehaviour
 {
     [SerializeField] GameObject canvas;
     [SerializeField] GameObject FadeOutPanel;
-    float delta=0;
+    public float delta = 0;
+    bool Lock = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,13 +20,21 @@ public class WalkingCamera : MonoBehaviour
     void Update()
     {
         delta += Time.deltaTime;
-        if(canvas.activeSelf == false && delta > 2f)
+        if (canvas.activeSelf == false && delta > 2f)
         {
             GetComponent<Animator>().enabled = true;
             if (delta > 3f)
                 FadeOutPanel.SetActive(true);
-            if (FadeOutPanel.gameObject.GetComponent<Image>().color.a > 0.9f)
-                SceneManager.LoadScene(1);
+            if (FadeOutPanel.gameObject.GetComponent<Image>().color.a > 0.99f)
+            {
+                if (SceneManager.GetActiveScene().name == "Title")
+                    SceneManager.LoadScene(1);
+                else if (SceneManager.GetActiveScene().name == "GameEnd")
+                {
+                    Application.Quit();
+                    Debug.Log("1");
+                }
+            }
         }
 
     }

@@ -52,6 +52,7 @@ public class StageManager2 : MonoBehaviour
             Over.SetActive(true);
             RemainClear.gameObject.SetActive(false);
             RemainUse.gameObject.SetActive(false);
+            PlayerPrefs.SetInt("NowStage", 2);
         }
         
     }

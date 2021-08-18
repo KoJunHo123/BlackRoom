@@ -22,6 +22,7 @@ public class GameOver : MonoBehaviour
         Over = FindObjectOfType<GetAnswer>();
         if (Over.GameOver)
         {
+            PlayerPrefs.SetInt("NowStage", 4);
             timer += Time.deltaTime;
             GameOverText.SetActive(true);
             if (timer > 3.0f)

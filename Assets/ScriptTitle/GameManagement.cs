@@ -9,6 +9,7 @@ public class GameManagement : MonoBehaviour
     void Start()
     {
         trigger = FindObjectOfType<ClickNo>();
+        PlayerPrefs.SetInt("NowStage", 0);
     }
 
     // Update is called once per frame
@@ -29,4 +30,5 @@ public class GameManagement : MonoBehaviour
     {
         trigger.trigger = true;
     }
+
 }
