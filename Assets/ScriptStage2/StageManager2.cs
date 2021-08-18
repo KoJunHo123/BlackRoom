@@ -99,6 +99,8 @@ public class StageManager2 : MonoBehaviour
 
             if (ClearCount > 0)
             {
+                UsingScale = 2;
+                RemainUse.text = "Remain use: " + UsingScale;
                 DestroyWeight = true;
                 Invoke("StageSet", 3.0f);
                 GetClear.isAnswer = false;
