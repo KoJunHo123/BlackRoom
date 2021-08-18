@@ -18,7 +18,7 @@ public class ScreenFadeIn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        color.a -= Time.deltaTime / 2f;
+        color.a -= Time.deltaTime / 3f;
         Panelimage.color = color;
         if (Panelimage.color.a < 0.01f)
         {
