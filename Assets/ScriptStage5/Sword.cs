@@ -38,7 +38,7 @@ public class Sword : MonoBehaviour
             Destroy(hit.transform.gameObject);
             stage5.GameOver = true;
             Instantiate(hitWrongParticle, hit.transform.position, Quaternion.LookRotation(hit.normal));
-            Instantiate(AnswerAudioPlayer);
+            Instantiate(WrongAudioPlayer);
         }
     }
 }

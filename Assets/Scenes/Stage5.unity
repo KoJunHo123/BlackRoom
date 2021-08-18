@@ -2321,7 +2321,7 @@ PrefabInstance:
     - target: {fileID: 3106903437625687290, guid: 4c0fd8ec01100a94d9d1827a19a50eb1, type: 3}
       propertyPath: hitAnswerParticle
       value: 
-      objectReference: {fileID: 198090597041805642, guid: d5f26854a8904624c8073139cd2eb346, type: 3}
+      objectReference: {fileID: 198313640795591846, guid: b29c1c092b2b341438abc1f2b36f1213, type: 3}
     - target: {fileID: 3106903437625687290, guid: 4c0fd8ec01100a94d9d1827a19a50eb1, type: 3}
       propertyPath: AnswerLayer.m_Bits
       value: 64
