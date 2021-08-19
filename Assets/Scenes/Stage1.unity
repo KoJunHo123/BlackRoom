@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.003995703, g: 0.00021792634, b: 0.000000051515347, a: 1}
+  m_IndirectSpecularColor: {r: 0.003995701, g: 0.0002179261, b: 0.000000051515347, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3128,6 +3128,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4730732024784560270, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
+      propertyPath: m_Radius
+      value: 0.041752964
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730732024784560270, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
+      propertyPath: m_Center.x
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730732024784560270, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
+      propertyPath: m_Center.y
+      value: 0.009920597
+      objectReference: {fileID: 0}
     - target: {fileID: 4730732024784560305, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
       propertyPath: m_InteractionManager
       value: 
@@ -3200,6 +3212,14 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1897062281}
+    - target: {fileID: 4730732025069052362, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
+      propertyPath: m_Radius
+      value: 0.04175296
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730732025069052362, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
+      propertyPath: m_Center.x
+      value: -0.08
+      objectReference: {fileID: 0}
     - target: {fileID: 4730732025069052365, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
       propertyPath: m_InteractionManager
       value: 
