@@ -20,6 +20,7 @@ public class RightCheckMass : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        other.gameObject.layer = 10;
         Speed = FindObjectOfType<ScaleRotate>();
         if (other.gameObject.tag == "Answer")
             Mass += 9;
@@ -27,6 +28,7 @@ public class RightCheckMass : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
+        other.gameObject.layer = 0;
         if (other.gameObject.tag == "Answer")
             Mass -= 9;
         else Mass -= 10;

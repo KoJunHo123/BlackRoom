@@ -10,13 +10,14 @@ public class ScaleRotate : MonoBehaviour
     StageManager2 Manager;
     public bool isLeftHeavy;
     public bool isRightHeavy;
-    public float speed = 15f;
+    public float getSpeed;
+    public float speed;
     public float UpDowndelta;
     public float LRdelta;
     public bool LeftEnd;
     public bool RightEnd;
-    float UpDownInfo;
-    float LRInfo;
+    public float UpDownInfo;
+    public float LRInfo;
     float timer = 0f;
     bool Lock;
     // Start is called before the first frame update

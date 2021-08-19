@@ -67,9 +67,15 @@ public class CheckStartPoint : MonoBehaviour
     {
         Debug.Log("Start");
         if (WolfinPoint && SheepinPoint)
+        {
+            Debug.Log("c");
             return true;
+        }
         else if (SheepinPoint && GlassinPoint)
+        {
+            Debug.Log("d");
             return true;
+        }
         else return false;
     }
 }

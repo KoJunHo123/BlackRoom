@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.003995701, g: 0.0002179261, b: 0.000000051515347, a: 1}
+  m_IndirectSpecularColor: {r: 0.0039957035, g: 0.00021792634, b: 0.000000051515347, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -209,13 +209,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159419535}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.13052616, y: 0, z: 0, w: 0.9914449}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1382214428}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -100.8, y: -189.00003}
@@ -532,7 +532,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 478136931}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.3429999, y: 0.986, z: 0}
+  m_LocalPosition: {x: -1.3429999, y: 0.682, z: 0}
   m_LocalScale: {x: 0.17141141, y: 0.26372, z: 0.20074368}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1016,7 +1016,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4589997030424458, guid: e82139b3bae6212439ea1e85ad29678b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.995
+      value: 0.691
       objectReference: {fileID: 0}
     - target: {fileID: 4589997030424458, guid: e82139b3bae6212439ea1e85ad29678b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1388,7 +1388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Wolf: {fileID: 1371193068}
   Sheep: {fileID: 619891296}
-  Glass: {fileID: 0}
+  Glass: {fileID: 1671331669}
   Player: {fileID: 1591673940}
   WolfinPoint: 1
   SheepinPoint: 1
@@ -1818,7 +1818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Wolf: {fileID: 1716013329}
   Sheep: {fileID: 619891296}
-  Glass: {fileID: 0}
+  Glass: {fileID: 1671331669}
   Player: {fileID: 1591673940}
   XRrig: {fileID: 1591673940}
   floor: {fileID: 687921875}
@@ -1853,16 +1853,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1047836379}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.13052616, y: 0, z: 0, w: 0.9914449}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1382214428}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 114, y: -189}
+  m_AnchoredPosition: {x: 124, y: -189}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1047836381
@@ -2127,7 +2127,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400036, guid: 0faaca137bc5a794098e6b71f8bb22f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.986
+      value: 0.682
       objectReference: {fileID: 0}
     - target: {fileID: 400036, guid: 0faaca137bc5a794098e6b71f8bb22f6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2340,7 +2340,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 10}
+  m_AnchoredPosition: {x: 0.04, y: 8.2}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1382214429
@@ -2638,7 +2638,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8786502218186645149, guid: d81ad2c61a1685a4ab71d43fe0bb663d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.989
+      value: 0.685
       objectReference: {fileID: 0}
     - target: {fileID: 8786502218186645149, guid: d81ad2c61a1685a4ab71d43fe0bb663d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2675,6 +2675,10 @@ PrefabInstance:
     - target: {fileID: 8786502218186867389, guid: d81ad2c61a1685a4ab71d43fe0bb663d, type: 3}
       propertyPath: m_Name
       value: Bucket
+      objectReference: {fileID: 0}
+    - target: {fileID: 8786502218186867389, guid: d81ad2c61a1685a4ab71d43fe0bb663d, type: 3}
+      propertyPath: m_TagString
+      value: Glass
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8786502218167388735, guid: d81ad2c61a1685a4ab71d43fe0bb663d, type: 3}
@@ -3146,11 +3150,11 @@ PrefabInstance:
       objectReference: {fileID: 1897062281}
     - target: {fileID: 4730732024784560305, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4730732024784560305, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4730732024784560305, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -3163,11 +3167,11 @@ PrefabInstance:
     - target: {fileID: 4730732024784560305, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 4730732024181751599}
+      objectReference: {fileID: 4730732024181751600}
     - target: {fileID: 4730732024784560305, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 4730732024181751599}
+      objectReference: {fileID: 4730732024181751600}
     - target: {fileID: 4730732024784560305, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -3226,11 +3230,11 @@ PrefabInstance:
       objectReference: {fileID: 1897062281}
     - target: {fileID: 4730732025069052365, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4730732025069052365, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4730732025069052365, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -3243,11 +3247,11 @@ PrefabInstance:
     - target: {fileID: 4730732025069052365, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 4730732024181751600}
+      objectReference: {fileID: 4730732024181751599}
     - target: {fileID: 4730732025069052365, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 4730732024181751600}
+      objectReference: {fileID: 4730732024181751599}
     - target: {fileID: 4730732025069052365, guid: 88f18cdc7c120af40b7240ecd1fda67d, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2

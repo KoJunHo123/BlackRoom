@@ -18,12 +18,14 @@ public class LeftCheckMass : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        other.gameObject.layer = 9;
         if (other.gameObject.tag == "Answer")
             Mass += 9;
         else Mass += 10;
     }
     private void OnTriggerExit(Collider other)
     {
+        other.gameObject.layer = 0;
         if (other.gameObject.tag == "Answer")
             Mass -= 9;
         else Mass -= 10;

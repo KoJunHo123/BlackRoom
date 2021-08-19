@@ -17,6 +17,13 @@ public class WeightInfo : MonoBehaviour
     {
         Manager = FindObjectOfType<StageManager2>();
         ScaleRot = FindObjectOfType<ScaleRotate>();
+       /* if (ScaleRot.LeftEnd || ScaleRot.RightEnd)
+        {
+            if (gameObject.layer == 9)
+                transform.position = new Vector3(transform.position.x - ScaleRot.LRInfo, transform.position.y + ScaleRot.UpDownInfo, transform.position.z);
+            else if (gameObject.layer == 10)
+                transform.position = new Vector3(transform.position.x + ScaleRot.LRInfo, transform.position.y - ScaleRot.UpDownInfo, transform.position.z);
+        }*/
         if (Manager.DestroyWeight)
         {
             Destroy(gameObject);

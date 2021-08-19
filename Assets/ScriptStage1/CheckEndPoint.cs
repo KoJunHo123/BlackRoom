@@ -75,9 +75,15 @@ public class CheckEndPoint : MonoBehaviour
     {
         Debug.Log("End");
         if (WolfinPoint && SheepinPoint)
+        {
+            Debug.Log("a");
             return true;
+        }
         else if (SheepinPoint && GlassinPoint)
+        {
+            Debug.Log("b");
             return true;
+        }
         else return false;
     }
 
