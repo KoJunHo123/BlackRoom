@@ -12,6 +12,8 @@ TagManager:
   - Tiger
   - Sheep
   - Glass
+  - Jump
+  - Attack
   layers:
   - Default
   - TransparentFX

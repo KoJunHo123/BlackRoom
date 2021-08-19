@@ -28,11 +28,14 @@ public class WalkingCamera : MonoBehaviour
             if (FadeOutPanel.gameObject.GetComponent<Image>().color.a > 0.99f)
             {
                 if (SceneManager.GetActiveScene().name == "Title")
+                {
+                    Debug.Log("2");
                     SceneManager.LoadScene(1);
+                }
                 else if (SceneManager.GetActiveScene().name == "GameEnd")
                 {
                     Application.Quit();
-                    Debug.Log("1");
+                    Debug.Log("µÅ");
                 }
             }
         }
