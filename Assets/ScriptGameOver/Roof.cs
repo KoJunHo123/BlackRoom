@@ -5,6 +5,7 @@ using UnityEngine;
 public class Roof : MonoBehaviour
 {
     [SerializeField] GameObject MachineGun;
+    [SerializeField] GameObject DieText;
     bool intheroom;
     float timer;
     public float getTime; //머신건 발사 전 연출의 시간
@@ -24,6 +25,7 @@ public class Roof : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        DieText.GetComponent<TypingEffect>().enabled = true;
         other.GetComponent<SphereCollider>().enabled = false;
         other.gameObject.AddComponent<BoxCollider>();
         //MachineGun.GetComponent<MuchineGunRotate>().enabled = true;
