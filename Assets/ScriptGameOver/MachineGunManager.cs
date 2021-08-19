@@ -9,6 +9,7 @@ public class MachineGunManager : MonoBehaviour
     [SerializeField] AudioSource SpinLoop;
     [SerializeField] AudioSource FireStart;
     [SerializeField] AudioSource FireLoop;
+    [SerializeField] AudioSource HitSound;
     [SerializeField] GameObject MachineGun;
     [SerializeField] GameObject FadeOut;
     [SerializeField] Transform BarrelEnd;
@@ -16,7 +17,7 @@ public class MachineGunManager : MonoBehaviour
     bool spinstart;
     bool spinloop;
     bool firestart;
-    bool fireloop;
+    public bool fireloop;
     float timer;
     float Blank;
     // Start is called before the first frame update
@@ -54,11 +55,18 @@ public class MachineGunManager : MonoBehaviour
             int i = 0;
             timer += Time.deltaTime;
             Blank += Time.deltaTime;
+            if(Blank > 0.1f)
+            {
+                HitSound.time = 0.3f;
+                HitSound.Play();
+                Blank = 0f;
+            }
             for (i = 0; i < Particle.Length; i++)
             {
                 if (!Particle[i].isPlaying)
                     Particle[i].Play();
             }
+            HitSound.volume -= Time.deltaTime / 3f;
             SpinLoop.volume -= Time.deltaTime / 7f;
             FireLoop.volume -= Time.deltaTime / 7f;
             

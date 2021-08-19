@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 4592391232799572338}
   - component: {fileID: 1878929240813715725}
   - component: {fileID: 1687141040556170176}
+  - component: {fileID: 6857601032520437069}
+  - component: {fileID: 3582583298721847184}
   m_Layer: 6
   m_Name: AnswerMonster
   m_TagString: Answer
@@ -57,10 +59,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.1924134
-  m_Height: 0.60624
-  m_Direction: 0
-  m_Center: {x: 0.1154813, y: 0.508422, z: -0.4088157}
+  m_Radius: 0.23501557
+  m_Height: 0.47003114
+  m_Direction: 2
+  m_Center: {x: 0.012044668, y: 0.506821, z: -0.4319021}
 --- !u!54 &1687141040556170176
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -77,6 +79,34 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!136 &6857601032520437069
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2826942574701876623}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.15334022
+  m_Height: 1.1858292
+  m_Direction: 2
+  m_Center: {x: 0, y: -0.07306528, z: 0.44024444}
+--- !u!136 &3582583298721847184
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2826942574701876623}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.14177525
+  m_Height: 0.54315555
+  m_Direction: 2
+  m_Center: {x: -0.0010760427, y: 0.22765791, z: -0.122791946}
 --- !u!1001 &4016453446119420893
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,15 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GetAnswer : MonoBehaviour
 {
+    [SerializeField] GameObject Explain;
+    [SerializeField] GameObject Clear;
+    [SerializeField] GameObject button1;
+    [SerializeField] GameObject button2;
+    [SerializeField] GameObject ClearFadeOut;
+    [SerializeField] AudioSource BGM;
     HatColor Answer;
     ImageManager Left;
     ImageManager Right;
     int countAnswer = 0;
     public bool GameOver = false;
-    public bool StageClear = false;
+    public bool GameClear = false;
+    float timer;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +27,22 @@ public class GetAnswer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(GameClear)
+        {
+            timer += Time.deltaTime;
+            Explain.SetActive(false);
+            button1.SetActive(false);
+            button2.SetActive(false);
+            Clear.SetActive(true);
+            if (timer > 3.0f)
+            {
+                BGM.volume -= 1f * (Time.deltaTime / 5f);
+                ClearFadeOut.SetActive(true);
+                if (timer > 8.0f)
+                    SceneManager.LoadScene(4);
+
+            }
+        }
         
     }
     public void isAnswerLeft()
@@ -34,7 +58,7 @@ public class GetAnswer : MonoBehaviour
             }
             else if(countAnswer >= 2)
             {
-                StageClear = true;
+                GameClear = true;
             }
 
         }
@@ -56,7 +80,7 @@ public class GetAnswer : MonoBehaviour
             }
             else if (countAnswer >= 2)
             {
-                StageClear = true;
+                GameClear = true;
             }
 
         }

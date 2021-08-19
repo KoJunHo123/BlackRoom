@@ -7,9 +7,10 @@ using TMPro;
 
 public class TypingEffect : MonoBehaviour
 {
+    [SerializeField] AudioSource TypingSound;
     public Text text;
-    private string m_text = "GOOD GAME " + "\n"+
-        "YOU DIE";
+    private string m_text = "You Failed." + "\n"+
+        "DIE";
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,7 @@ public class TypingEffect : MonoBehaviour
         for (int i = 0; i <= m_text.Length; i++)
         {
             text.text = m_text.Substring(0, i);
-
+            TypingSound.Play();
             yield return new WaitForSeconds(0.5f);
         }
     }

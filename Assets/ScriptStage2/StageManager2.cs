@@ -18,6 +18,7 @@ public class StageManager2 : MonoBehaviour
     [SerializeField] GameObject Player;
     [SerializeField] GameObject FadeOut;
     [SerializeField] AudioSource BGM;
+    [SerializeField] GameObject ClearFadeOut;
     MakeWeight MakeWeight;
     int UsingScale = 2;
     int ClearCount = 3;
@@ -44,17 +45,23 @@ public class StageManager2 : MonoBehaviour
     {
         if (GameClear)
         {
-            Explain.SetActive(false);
             timer += Time.deltaTime;
+            Explain.SetActive(false);
+            RemainUse.gameObject.SetActive(false);
+            RemainClear.gameObject.SetActive(false);
+            RemainUse.gameObject.SetActive(false);
             Clear.SetActive(true);
-            if (timer > 5.0f)
+            if (timer > 3.0f)
+            {
+                ClearFadeOut.SetActive(true);
+                BGM.volume -= 1f * (Time.deltaTime / 5f);
+                if (timer > 8.0f)
                 SceneManager.LoadScene(3);
+            }
         }
         if(GameOver)
         {
             Explain.SetActive(false);
-            RemainClear.gameObject.SetActive(false);
-            RemainUse.gameObject.SetActive(false);
             PlayerPrefs.SetInt("NowStage", 2);
             Over.SetActive(true);
             BGM.pitch -= 1f * (Time.deltaTime / 6f);

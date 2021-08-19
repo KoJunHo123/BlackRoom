@@ -1,23 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndText : MonoBehaviour
 {
-    public GameObject TextEnd;
-    public GameObject TextTryAgain;
+    [SerializeField] GameObject TextEnd;
+    [SerializeField] GameObject TextTryAgain;
 
-    public GameObject YesTryAgain;
-    public GameObject NoTryAgain;
-    
-    public GameObject YesEnd;
-    public GameObject NoEnd;
+    [SerializeField] GameObject YesTryAgain;
+    [SerializeField] GameObject NoTryAgain;
+
+    [SerializeField] GameObject YesEnd;
+    [SerializeField] GameObject NoEnd;
+
+    public bool TestGameClearGETSET;
 
     private void Awake()
     {
-        PlayerPrefs.SetInt("NewStage", 1);
+       /* PlayerPrefs.SetInt("NewStage", 1); 
 
-        if(PlayerPrefs.GetInt("NewStage") == 0)
+        if(PlayerPrefs.GetInt("NewStage") == 0) // 항상 false
         {
             TextEnd.SetActive(true);
             YesEnd.SetActive(true);
@@ -28,16 +31,33 @@ public class EndText : MonoBehaviour
             TextTryAgain.SetActive(true);
             YesTryAgain.SetActive(true);
             NoTryAgain.SetActive(true);
-        }
+        }*/
     }
     void Start()
     {
-        
+        if (TestGameClearGETSET)
+            PlayerPrefs.SetInt("GameClear", 1);
+        else PlayerPrefs.SetInt("GameClear", 0); //테스트 끝날시 지울것
+
+
+        if (PlayerPrefs.GetInt("GameClear") == 1)
+        {
+            TextEnd.SetActive(true);
+            YesEnd.SetActive(true);
+            NoEnd.SetActive(true);
+        }
+        else if (PlayerPrefs.GetInt("GameClear") != 1)
+        {
+            TextTryAgain.SetActive(true);
+            YesTryAgain.SetActive(true);
+            NoTryAgain.SetActive(true);
+        } 
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

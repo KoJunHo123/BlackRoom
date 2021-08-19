@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 public class CheckEndPoint : MonoBehaviour
 {
     [SerializeField] GameObject Wolf;
@@ -11,12 +13,16 @@ public class CheckEndPoint : MonoBehaviour
     [SerializeField] GameObject XRrig;
     [SerializeField] GameObject floor;
     [SerializeField] AudioSource BGM;
+    [SerializeField] GameObject Explain;
+    [SerializeField] GameObject Clear;
+    [SerializeField] GameObject FadeOut;
     CheckStartPoint CheckStart;
     public bool WolfinPoint = false;
     public bool SheepinPoint = false;
     public bool GlassinPoint = false;
     public bool PlayerinPoint = false;
     public bool GameOver;
+    public bool GameClear;
     float timer;
 
     // Start is called before the first frame update
@@ -35,8 +41,20 @@ public class CheckEndPoint : MonoBehaviour
         }
 
         if (WolfinPoint && SheepinPoint && GlassinPoint && PlayerinPoint)
+            GameClear = true;
+
+        if(GameClear)
         {
-            SceneManager.LoadScene(2);
+            timer += Time.deltaTime;
+            Explain.SetActive(false);
+            Clear.SetActive(true);
+            if (timer > 3.0f)
+            {
+                FadeOut.SetActive(true);
+                BGM.volume -= 1f * (Time.deltaTime / 5f);
+                if (timer > 8.0f)
+                SceneManager.LoadScene(2);
+            }
         }
         //게임 클리어 
 

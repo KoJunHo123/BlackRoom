@@ -5,6 +5,10 @@ using UnityEngine;
 public class GameManagement : MonoBehaviour
 {
     ClickNo trigger = null;
+    private void Awake()
+    {
+        PlayerPrefs.DeleteAll();
+    }
     // Start is called before the first frame update
     void Start()
     {

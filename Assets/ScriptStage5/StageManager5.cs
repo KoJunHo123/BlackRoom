@@ -6,7 +6,12 @@ public class StageManager5 : MonoBehaviour
 {
     [SerializeField] GameObject FadeIn;
     [SerializeField] AudioSource[] Number = new AudioSource[10];
-    //[SerializeField] AudioSource GameOverSound;
+    [SerializeField] GameObject FadeOut_GameClear;
+    [SerializeField] GameObject Player;
+    [SerializeField] GameObject GameClearText;
+    [SerializeField] GameObject LostOX;
+    [SerializeField] GameObject Spawn;
+    [SerializeField] AudioSource BGM;
 
     Spawn spawn;
     QuizInfo data;
@@ -67,6 +72,16 @@ public class StageManager5 : MonoBehaviour
     public void Gameclear()
     {
         PlayerPrefs.SetInt("NowStage", 0);
-        SceneManager.LoadScene("GameEnd");
+        PlayerPrefs.SetInt("GameClear", 1);
+        timer += Time.deltaTime;
+        GameClearText.SetActive(true);
+        if (timer > 3.0f)
+        {
+            FadeOut_GameClear.SetActive(true);
+            Player.AddComponent<Rigidbody>();
+            BGM.volume -= 1f * (Time.deltaTime / 5f);
+            if (timer > 8.0f)
+                SceneManager.LoadScene("GameEnd");
+        }
     }
 }

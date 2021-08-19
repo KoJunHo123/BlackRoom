@@ -14,6 +14,10 @@ public class StageManager4 : MonoBehaviour
     [SerializeField] GameObject FadeOut_GameOver;
     [SerializeField] GameObject GameOverText;
     [SerializeField] AudioSource BGM;
+    [SerializeField] GameObject Explain;
+    [SerializeField] GameObject GameClearText;
+    [SerializeField] GameObject GameClearFadeOut;
+
     public int count;
     public bool GameOver;
     public bool GameClear;
@@ -29,6 +33,7 @@ public class StageManager4 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        RemainCount.text = "Remain Monster: " + count;
         CheckGameState();
         if (GameOver)
         {
@@ -47,7 +52,6 @@ public class StageManager4 : MonoBehaviour
 
         if (GameClear)
             ClearGame();
-        RemainCount.text = "Remain Monster: " + count;
     }
 
     public void SpawnObject()
@@ -106,8 +110,17 @@ public class StageManager4 : MonoBehaviour
     }
     public void ClearGame()
     {
-        //게임 클리어시 구현
-        SceneManager.LoadScene(5);
+        timer += Time.deltaTime;
+        Explain.SetActive(false);
+        RemainCount.gameObject.SetActive(false);
+        GameClearText.SetActive(true);
+        if (timer > 3.0f)
+        {
+            BGM.volume -= 1f * (Time.deltaTime / 5f);
+            GameClearFadeOut.SetActive(true);
+            if (timer > 8.0f)
+                SceneManager.LoadScene(5);
+        }
         
     }
 

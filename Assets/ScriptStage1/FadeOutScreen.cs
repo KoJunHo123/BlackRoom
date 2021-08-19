@@ -10,7 +10,7 @@ public class FadeOutScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        color = Color.red;
+        color = gameObject.GetComponent<Image>().color;
         color.a = 0f;
     }
 
