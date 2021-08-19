@@ -11,11 +11,14 @@ public class MachineGunManager : MonoBehaviour
     [SerializeField] AudioSource FireLoop;
     [SerializeField] GameObject MachineGun;
     [SerializeField] GameObject FadeOut;
+    [SerializeField] Transform BarrelEnd;
+    [SerializeField] ParticleSystem[] Particle;
     bool spinstart;
     bool spinloop;
     bool firestart;
     bool fireloop;
     float timer;
+    float Blank;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,7 +50,19 @@ public class MachineGunManager : MonoBehaviour
             fireloop = true;
         }
         if (fireloop)
+        {
+            int i = 0;
             timer += Time.deltaTime;
+            Blank += Time.deltaTime;
+            for (i = 0; i < Particle.Length; i++)
+            {
+                if (!Particle[i].isPlaying)
+                    Particle[i].Play();
+            }
+            SpinLoop.volume -= Time.deltaTime / 7f;
+            FireLoop.volume -= Time.deltaTime / 7f;
+            
+        }
         if (timer > 8.0f)
         {
             SceneManager.LoadScene("GameEnd");
