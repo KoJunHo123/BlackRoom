@@ -23,7 +23,7 @@ public class GameOver : MonoBehaviour
         Over = FindObjectOfType<GetAnswer>();
         if (Over.GameOver)
         {
-            PlayerPrefs.SetInt("NowStage", 4);
+            PlayerPrefs.SetInt("NowStage", 3);
             timer += Time.deltaTime;
             BGM.pitch -= 1f * (Time.deltaTime / 10f);
             GameOverText.SetActive(true);
