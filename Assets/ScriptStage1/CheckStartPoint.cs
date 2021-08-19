@@ -24,10 +24,9 @@ public class CheckStartPoint : MonoBehaviour
     void Update()
     {
         CheckEnd = FindObjectOfType<CheckEndPoint>();
-        if (!PlayerinPoint && !CheckEnd.GameOver)
+        if (CheckEnd.PlayerinPoint && !CheckEnd.GameOver)
         {
             CheckEnd.GameOver = CheckGameOver();
-            Debug.Log("Startif");
         }
 
         }
@@ -42,7 +41,6 @@ public class CheckStartPoint : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             PlayerinPoint = false;
-            Debug.Log("1");
         }
     }
 
@@ -57,7 +55,6 @@ public class CheckStartPoint : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             PlayerinPoint = true;
-            Debug.Log("3");
         }
 
 
@@ -65,15 +62,12 @@ public class CheckStartPoint : MonoBehaviour
 
     bool CheckGameOver()
     {
-        Debug.Log("Start");
         if (WolfinPoint && SheepinPoint)
         {
-            Debug.Log("c");
             return true;
         }
         else if (SheepinPoint && GlassinPoint)
         {
-            Debug.Log("d");
             return true;
         }
         else return false;

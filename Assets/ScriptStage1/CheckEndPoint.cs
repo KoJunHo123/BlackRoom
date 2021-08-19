@@ -11,6 +11,7 @@ public class CheckEndPoint : MonoBehaviour
     [SerializeField] GameObject XRrig;
     [SerializeField] GameObject floor;
     [SerializeField] AudioSource BGM;
+    CheckStartPoint CheckStart;
     public bool WolfinPoint = false;
     public bool SheepinPoint = false;
     public bool GlassinPoint = false;
@@ -27,10 +28,10 @@ public class CheckEndPoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!PlayerinPoint && !GameOver)
+        CheckStart = FindObjectOfType<CheckStartPoint>();
+        if (!CheckStart.PlayerinPoint && !GameOver)
         {
             GameOver = CheckGameOver();
-            Debug.Log("Endif");
         }
 
         if (WolfinPoint && SheepinPoint && GlassinPoint && PlayerinPoint)
@@ -73,15 +74,12 @@ public class CheckEndPoint : MonoBehaviour
 
     bool CheckGameOver()
     {
-        Debug.Log("End");
         if (WolfinPoint && SheepinPoint)
         {
-            Debug.Log("a");
             return true;
         }
         else if (SheepinPoint && GlassinPoint)
         {
-            Debug.Log("b");
             return true;
         }
         else return false;
