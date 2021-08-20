@@ -18,6 +18,8 @@ public class LostOXGet : MonoBehaviour
     {
         Manager = FindObjectOfType<StageManager5>();
         Spawner = FindObjectOfType<Spawn>();
+        Debug.Log(Spawner.WrongCount + "WC");
+        Debug.Log(Manager.i + "i");
         if (Spawner.WrongCount == GetCount && Manager.i == 12)
             Manager.GameClear = true;
 
@@ -28,8 +30,12 @@ public class LostOXGet : MonoBehaviour
         if (other.gameObject.tag == "Answer")
         {
             Manager.GameOver = true;
-            Destroy(other);
+            Destroy(other.gameObject);
         }
-        else GetCount++;
+         if (other.gameObject.tag == "Wrong")
+        {
+            GetCount++;
+            Destroy(other.gameObject);
+        }
     }
 }

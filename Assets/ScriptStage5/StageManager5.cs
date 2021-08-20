@@ -16,6 +16,7 @@ public class StageManager5 : MonoBehaviour
     Spawn spawn;
     QuizInfo data;
     float timer=0;
+    float timer2 = 0;
     public float quizTerm = 1.0f;
     public int i=0;
     public bool GameOver;
@@ -73,9 +74,9 @@ public class StageManager5 : MonoBehaviour
     {
         PlayerPrefs.SetInt("NowStage", 0);
         PlayerPrefs.SetInt("GameClear", 1);
-        timer += Time.deltaTime;
+        timer2 += Time.deltaTime;
         GameClearText.SetActive(true);
-        if (timer > 3.0f)
+        if (timer2 > 3.0f)
         {
             FadeOut_GameClear.SetActive(true);
             Player.AddComponent<Rigidbody>();
