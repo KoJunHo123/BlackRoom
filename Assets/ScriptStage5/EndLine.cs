@@ -5,10 +5,12 @@ using UnityEngine;
 public class EndLine : MonoBehaviour
 {
     StageManager5 stage5;
-
+    Spawn spawn;
+    int count;
     void Start()
     {
         stage5 = FindObjectOfType<StageManager5>();
+        spawn = FindObjectOfType<Spawn>();
     }
 
 
@@ -24,9 +26,12 @@ public class EndLine : MonoBehaviour
             Destroy(other.gameObject);
             stage5.GameOver = true;
         }
-        if(other.gameObject.tag == "Wrong")
+        if (other.gameObject.tag == "Wrong")
         {
             Destroy(other.gameObject);
+            count++;
+            if (spawn.WrongCount == count)
+                stage5.GameClear = true;
         }
     }
 
