@@ -12,6 +12,7 @@ public class GetAnswer : MonoBehaviour
     [SerializeField] GameObject ClearFadeOut;
     [SerializeField] GameObject Timer;
     [SerializeField] AudioSource BGM;
+    Fog remainTimer;
     HatColor Answer;
     ImageManager Left;
     ImageManager Right;
@@ -28,6 +29,11 @@ public class GetAnswer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        remainTimer = FindObjectOfType<Fog>();
+        if(remainTimer.RemainTime < 0)
+        {
+            GameOver = true;
+        }
         if(GameClear)
         {
             timer += Time.deltaTime;

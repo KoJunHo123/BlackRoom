@@ -16,7 +16,7 @@ public class Fog : MonoBehaviour
     void Update()
     {
         RemainTime -= Time.deltaTime;
-        RemainTimer.text = "Time: " + RemainTime + "s";
+        RemainTimer.text = "Time: " + (int)RemainTime + "s";
         if (transform.localScale.z < 10f)
         transform.localScale = new Vector3(1f,1f, transform.localScale.z + (Size*Time.deltaTime));
 

@@ -820,6 +820,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5716990231687433907, guid: 64680f3106f529040a2d9d333a3e0188, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5716990231687433919, guid: 64680f3106f529040a2d9d333a3e0188, type: 3}
       propertyPath: Path
       value: 
@@ -1207,7 +1211,6 @@ MonoBehaviour:
   NoTryAgain: {fileID: 1525624047}
   YesEnd: {fileID: 1609858022}
   NoEnd: {fileID: 248635576}
-  TestGameClearGETSET: 0
 --- !u!1 &1225856587
 GameObject:
   m_ObjectHideFlags: 0
