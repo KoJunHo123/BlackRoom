@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManagement : MonoBehaviour
 {
     ClickNo trigger = null;
     private void Awake()
     {
+        if (SceneManager.GetActiveScene().name == "Title")
         PlayerPrefs.DeleteAll();
     }
     // Start is called before the first frame update

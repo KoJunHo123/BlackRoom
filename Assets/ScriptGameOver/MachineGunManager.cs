@@ -33,7 +33,7 @@ public class MachineGunManager : MonoBehaviour
             SpinStart.Play();
             spinstart = true;
         }
-        else if (!SpinStart.isPlaying && !spinloop && spinstart)
+        else if (!spinloop && spinstart)
         {
             SpinLoop.Play();
             spinloop = true;
@@ -71,7 +71,7 @@ public class MachineGunManager : MonoBehaviour
             FireLoop.volume -= Time.deltaTime / 7f;
             
         }
-        if (timer > 8.0f)
+        if (timer > 7.0f)
         {
             SceneManager.LoadScene("GameEnd");
         }
