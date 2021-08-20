@@ -14,32 +14,9 @@ public class EndText : MonoBehaviour
     [SerializeField] GameObject YesEnd;
     [SerializeField] GameObject NoEnd;
 
-    public bool TestGameClearGETSET;
 
     private void Awake()
     {
-       /* PlayerPrefs.SetInt("NewStage", 1); 
-
-        if(PlayerPrefs.GetInt("NewStage") == 0) // 항상 false
-        {
-            TextEnd.SetActive(true);
-            YesEnd.SetActive(true);
-            NoEnd.SetActive(true);
-        }
-        else
-        {
-            TextTryAgain.SetActive(true);
-            YesTryAgain.SetActive(true);
-            NoTryAgain.SetActive(true);
-        }*/
-    }
-    void Start()
-    {
-        //if (TestGameClearGETSET)
-        //    PlayerPrefs.SetInt("GameClear", 1);
-        //else PlayerPrefs.SetInt("GameClear", 0); //테스트 끝날시 지울것
-
-
         if (PlayerPrefs.GetInt("GameClear") == 1)
         {
             TextEnd.SetActive(true);
@@ -51,7 +28,29 @@ public class EndText : MonoBehaviour
             TextTryAgain.SetActive(true);
             YesTryAgain.SetActive(true);
             NoTryAgain.SetActive(true);
-        } 
+        }
+        /* PlayerPrefs.SetInt("NewStage", 1); 
+
+         if(PlayerPrefs.GetInt("NewStage") == 0) // 항상 false
+         {
+             TextEnd.SetActive(true);
+             YesEnd.SetActive(true);
+             NoEnd.SetActive(true);
+         }
+         else
+         {
+             TextTryAgain.SetActive(true);
+             YesTryAgain.SetActive(true);
+             NoTryAgain.SetActive(true);
+         }*/
+    }
+    void Start()
+    {
+        //if (TestGameClearGETSET)
+        //    PlayerPrefs.SetInt("GameClear", 1);
+        //else PlayerPrefs.SetInt("GameClear", 0); //테스트 끝날시 지울것
+
+
 
     }
 

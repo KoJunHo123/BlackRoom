@@ -81,7 +81,7 @@ public class StageManager5 : MonoBehaviour
             FadeOut_GameClear.SetActive(true);
             Player.AddComponent<Rigidbody>();
             BGM.volume -= 1f * (Time.deltaTime / 5f);
-            if (timer > 8.0f)
+            if (timer2 > 8.0f)
                 SceneManager.LoadScene("GameEnd");
         }
     }

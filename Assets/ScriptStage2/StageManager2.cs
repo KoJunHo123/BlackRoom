@@ -62,6 +62,7 @@ public class StageManager2 : MonoBehaviour
         if(GameOver)
         {
             Explain.SetActive(false);
+            RemainClear.gameObject.SetActive(false);
             PlayerPrefs.SetInt("NowStage", 2);
             Over.SetActive(true);
             BGM.pitch -= 1f * (Time.deltaTime / 6f);

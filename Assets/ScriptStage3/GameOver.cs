@@ -8,6 +8,10 @@ public class GameOver : MonoBehaviour
     [SerializeField] GameObject FadeOut_GameOver;
     [SerializeField] GameObject Player;
     [SerializeField] GameObject GameOverText;
+    [SerializeField] GameObject Explain;
+    [SerializeField] GameObject Timer;
+    [SerializeField] GameObject B1;
+    [SerializeField] GameObject B2;
     [SerializeField] AudioSource BGM;
     GetAnswer Over;
     float timer;
@@ -27,10 +31,14 @@ public class GameOver : MonoBehaviour
             timer += Time.deltaTime;
             BGM.pitch -= 1f * (Time.deltaTime / 10f);
             GameOverText.SetActive(true);
+            Explain.SetActive(false);
+            Timer.SetActive(false);
+            B1.SetActive(false);
+            B2.SetActive(false);
+            
             if (timer > 3.0f)
             {
                 FadeOut_GameOver.SetActive(true);
-                Player.AddComponent<Rigidbody>();
             }
 
             if (timer > 7.0f)

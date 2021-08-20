@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class RemainTimer : MonoBehaviour
 {
-    [SerializeField] float gameTime = 30.0f;
+    [SerializeField] float gameTime;
     Text uiText;
     float currentTime;
     // Start is called before the first frame update

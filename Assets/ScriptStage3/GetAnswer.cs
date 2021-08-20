@@ -10,6 +10,7 @@ public class GetAnswer : MonoBehaviour
     [SerializeField] GameObject button1;
     [SerializeField] GameObject button2;
     [SerializeField] GameObject ClearFadeOut;
+    [SerializeField] GameObject Timer;
     [SerializeField] AudioSource BGM;
     HatColor Answer;
     ImageManager Left;
@@ -34,6 +35,7 @@ public class GetAnswer : MonoBehaviour
             button1.SetActive(false);
             button2.SetActive(false);
             Clear.SetActive(true);
+            Timer.SetActive(false);
             if (timer > 3.0f)
             {
                 BGM.volume -= 1f * (Time.deltaTime / 5f);
