@@ -35,9 +35,9 @@ public class EndText : MonoBehaviour
     }
     void Start()
     {
-        if (TestGameClearGETSET)
-            PlayerPrefs.SetInt("GameClear", 1);
-        else PlayerPrefs.SetInt("GameClear", 0); //테스트 끝날시 지울것
+        //if (TestGameClearGETSET)
+        //    PlayerPrefs.SetInt("GameClear", 1);
+        //else PlayerPrefs.SetInt("GameClear", 0); //테스트 끝날시 지울것
 
 
         if (PlayerPrefs.GetInt("GameClear") == 1)
