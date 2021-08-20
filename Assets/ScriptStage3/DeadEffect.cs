@@ -17,6 +17,7 @@ public class DeadEffect : MonoBehaviour
         Manager = FindObjectOfType<GetAnswer>();
         if(Manager.GameOver)
         {
+            gameObject.AddComponent<Rigidbody>();
             transform.Rotate(-Vector3.forward * Time.deltaTime * speed);
             if (transform.rotation.eulerAngles.z < 320f)
                 speed = 0;

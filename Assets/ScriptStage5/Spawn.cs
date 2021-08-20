@@ -10,6 +10,7 @@ public class Spawn : MonoBehaviour
     QuizInfo data;
     StageManager5 Manager;
     public int WrongCount=0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,10 +30,12 @@ public class Spawn : MonoBehaviour
         if (Manager.i > 1)
         {
             if (data.Question[Manager.i] == data.Question[Manager.i - 2])
+            {
                 Instantiate(AnswerGhost, SpawnPostion[Random.Range(0, 2)]);
+            }
             else
             {
-                Instantiate(WrongGhost, SpawnPostion[Random.Range(0,2)]);
+                Instantiate(WrongGhost, SpawnPostion[Random.Range(0, 2)]);
                 WrongCount++;
             }
         }

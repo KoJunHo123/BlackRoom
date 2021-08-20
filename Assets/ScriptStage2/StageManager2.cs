@@ -21,7 +21,7 @@ public class StageManager2 : MonoBehaviour
     [SerializeField] GameObject ClearFadeOut;
     MakeWeight MakeWeight;
     int UsingScale = 2;
-    int ClearCount = 3;
+    int ClearCount = 2;
     AnswerPlate GetClear;
     public bool GameClear;
     public bool GameOver;

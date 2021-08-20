@@ -42,7 +42,7 @@ public class GameOver : MonoBehaviour
             }
 
             if (timer > 7.0f)
-                SceneManager.LoadScene("GameOver");
+                SceneManager.LoadScene("GameEnd");
         }
 
     }

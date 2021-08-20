@@ -8,6 +8,7 @@ public class Sword : MonoBehaviour
     public LayerMask AnswerLayer;
     public LayerMask WrongLayer;
     StageManager5 stage5;
+    public int GetCount;
 
     [SerializeField] ParticleSystem hitAnswerParticle;
     [SerializeField] ParticleSystem hitWrongParticle;
@@ -32,6 +33,7 @@ public class Sword : MonoBehaviour
             Destroy(hit.transform.gameObject);
             Instantiate(hitAnswerParticle, hit.transform.position, Quaternion.LookRotation(hit.normal));
             Instantiate(AnswerAudioPlayer);
+            GetCount++;
         }
         else if(Physics.Raycast(transform.position, transform.forward, out hit, 2, WrongLayer))
         {
