@@ -5,7 +5,6 @@ using UnityEngine;
 public class EndLine : MonoBehaviour
 {
     StageManager5 stage5;
-
     void Start()
     {
         stage5 = FindObjectOfType<StageManager5>();
@@ -19,12 +18,12 @@ public class EndLine : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Answer")
+        if (other.gameObject.tag == "Answer")
         {
             Destroy(other.gameObject);
             stage5.GameOver = true;
         }
-        if(other.gameObject.tag == "Wrong")
+        if (other.gameObject.tag == "Wrong")
         {
             Destroy(other.gameObject);
         }

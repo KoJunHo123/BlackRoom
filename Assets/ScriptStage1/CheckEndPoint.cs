@@ -35,7 +35,7 @@ public class CheckEndPoint : MonoBehaviour
     void Update()
     {
         CheckStart = FindObjectOfType<CheckStartPoint>();
-        if (!CheckStart.PlayerinPoint && !GameOver)
+        if (CheckStart.PlayerinPoint && !GameOver)
         {
             GameOver = CheckGameOver();
         }
