@@ -38,7 +38,7 @@ public class GetGameOver : MonoBehaviour
             }
 
             if (timer > 7.0f)
-                SceneManager.LoadScene("GameOver");
+                SceneManager.LoadScene("GameOver2");
         }
 
     }
