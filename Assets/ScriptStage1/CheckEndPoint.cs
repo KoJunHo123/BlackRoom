@@ -16,14 +16,17 @@ public class CheckEndPoint : MonoBehaviour
     [SerializeField] GameObject Explain;
     [SerializeField] GameObject Clear;
     [SerializeField] GameObject FadeOut;
+    [SerializeField] GameObject GameOverText;
+    [SerializeField] GameObject Obstacle;
     CheckStartPoint CheckStart;
+    StageManager1 Manager;
     public bool WolfinPoint = false;
     public bool SheepinPoint = false;
     public bool GlassinPoint = false;
     public bool PlayerinPoint = false;
     public bool GameOver;
     public bool GameClear;
-    float timer;
+    public float timer;
 
     // Start is called before the first frame update
     void Start()
@@ -105,12 +108,20 @@ public class CheckEndPoint : MonoBehaviour
 
     void SetGameOver()
     {
+        Manager = FindObjectOfType<StageManager1>();
         timer += Time.deltaTime;
-        floor.GetComponent<BoxCollider>().isTrigger = true;
-        XRrig.GetComponent<Rigidbody>().isKinematic= false;
-        XRrig.GetComponent<Rigidbody>().useGravity = true;
-        BGM.pitch -= 1f * (Time.deltaTime / 5f);
-        if (timer > 5f)
+        GameOverText.SetActive(true);
+        Explain.SetActive(false);
+        if (timer > 3.0f)
+        {
+            Obstacle.SetActive(true);
+            Manager.GameOver = true;
+            floor.GetComponent<BoxCollider>().isTrigger = true;
+            XRrig.GetComponent<Rigidbody>().isKinematic = false;
+            XRrig.GetComponent<Rigidbody>().useGravity = true;
+            BGM.pitch -= 1f * (Time.deltaTime / 5f);
+        }
+        if (timer > 8f)
             SceneManager.LoadScene("GameOver");
     }
 
