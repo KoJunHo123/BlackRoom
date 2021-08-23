@@ -10,6 +10,7 @@ public class MonsterRun : MonoBehaviour
 
     public bool walking = true;
     public float speed;
+    public float delta;
 
     void Start()
     {
@@ -18,6 +19,8 @@ public class MonsterRun : MonoBehaviour
 
     void Update()
     {
+        delta += Time.deltaTime;
+        if(delta > 3)
             transform.position = Vector3.MoveTowards(transform.position, AttackPoint.position, speed * Time.deltaTime);
     }
 

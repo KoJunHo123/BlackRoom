@@ -34,7 +34,7 @@ public class EndText : MonoBehaviour
          if(PlayerPrefs.GetInt("NewStage") == 0) // Ç×»ó false
          {
              TextEnd.SetActive(true);
-             YesEnd.SetActive(true);
+     0        YesEnd.SetActive(true);
              NoEnd.SetActive(true);
          }
          else
