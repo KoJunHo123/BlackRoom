@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class EndText : MonoBehaviour
 {
@@ -14,9 +15,12 @@ public class EndText : MonoBehaviour
     [SerializeField] GameObject YesEnd;
     [SerializeField] GameObject NoEnd;
 
+    [SerializeField] GameObject FadeInOut;
 
     private void Awake()
     {
+
+        FadeInOut.SetActive(true);
         if (PlayerPrefs.GetInt("GameClear") == 1)
         {
             TextEnd.SetActive(true);
@@ -29,6 +33,8 @@ public class EndText : MonoBehaviour
             YesTryAgain.SetActive(true);
             NoTryAgain.SetActive(true);
         }
+
+
         /* PlayerPrefs.SetInt("NewStage", 1); 
 
          if(PlayerPrefs.GetInt("NewStage") == 0) // Ç×»ó false
