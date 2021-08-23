@@ -490,6 +490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FadeIn: {fileID: 1714977578}
   FadeOut: {fileID: 381266616}
+  delta: 0
 --- !u!1 &381266616
 GameObject:
   m_ObjectHideFlags: 0
@@ -3080,6 +3081,18 @@ PrefabInstance:
     - target: {fileID: 5716990231687433905, guid: 64680f3106f529040a2d9d333a3e0188, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716990231687433906, guid: 64680f3106f529040a2d9d333a3e0188, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 7.5357075
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716990231687433906, guid: 64680f3106f529040a2d9d333a3e0188, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5.2337766
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716990231687433906, guid: 64680f3106f529040a2d9d333a3e0188, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.9628246
       objectReference: {fileID: 0}
     - target: {fileID: 5716990231687433907, guid: 64680f3106f529040a2d9d333a3e0188, type: 3}
       propertyPath: m_IsActive
