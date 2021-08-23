@@ -46,12 +46,12 @@ public class StageManager4 : MonoBehaviour
             {
                 WallMove.SetActive(true);
             }
-            if (timer > 6.0f)
+            if (timer > 5.0f)
             {
                 //Player.AddComponent<Rigidbody>();
                 FadeOut_GameOver.SetActive(true);
             }
-            if (timer > 8.0f)
+            if (timer > 7.0f)
                 SceneManager.LoadScene("GameEnd");
         }
 
