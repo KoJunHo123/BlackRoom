@@ -17,6 +17,7 @@ public class StageManager4 : MonoBehaviour
     [SerializeField] GameObject Explain;
     [SerializeField] GameObject GameClearText;
     [SerializeField] GameObject GameClearFadeOut;
+    [SerializeField] GameObject WallMove;
 
     public int count;
     public bool GameOver;
@@ -41,13 +42,17 @@ public class StageManager4 : MonoBehaviour
             PlayerPrefs.SetInt("NowStage", 4);
             BGM.pitch -= 1f * (Time.deltaTime / 12f);
             GameOverText.SetActive(true);
+            if(timer > 2.0f)
+            {
+                WallMove.SetActive(true);
+            }
             if (timer > 5.0f)
-            { 
-                Player.AddComponent<Rigidbody>();
+            {
+                //Player.AddComponent<Rigidbody>();
                 FadeOut_GameOver.SetActive(true);
             }
             if (timer > 7.0f)
-                SceneManager.LoadScene("GameOver");
+                SceneManager.LoadScene("GameEnd");
         }
 
         if (GameClear)
