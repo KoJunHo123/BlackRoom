@@ -11,7 +11,6 @@ public class WalkingCamera : MonoBehaviour
     [SerializeField] GameObject FadeOutPanel;
     [SerializeField] AudioSource WalkSound;
     public float delta = 0;
-    bool Lock = false;
     bool WalkSoundPlay;
     // Start is called before the first frame update
     void Start()
