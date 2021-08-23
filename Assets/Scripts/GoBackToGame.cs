@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GoBackToGame : MonoBehaviour
 {
+    public GameObject HandOnOff;
+
     HandMoveEnd Hand;
     public Transform Back;
     public float speed;
@@ -29,6 +31,7 @@ public class GoBackToGame : MonoBehaviour
 
     public void MoveChange()
     {
+        HandOnOff.SetActive(true);
         TryAgain = true;
     }
 

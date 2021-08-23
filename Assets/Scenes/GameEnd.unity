@@ -293,6 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a80a2c1d69be9c4489b5b94353049723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HandOnOff: {fileID: 1518108307}
   Back: {fileID: 147275934}
   speed: 5
   delta: 0
@@ -3264,6 +3265,10 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: a0f2e416fe09a3e458e3da32b275ae31, type: 3}
       propertyPath: m_Name
       value: SK_Hand
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: a0f2e416fe09a3e458e3da32b275ae31, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0f2e416fe09a3e458e3da32b275ae31, type: 3}
