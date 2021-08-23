@@ -8,7 +8,7 @@ public class StageManager1 : MonoBehaviour
     [SerializeField] GameObject FadeIn;
     [SerializeField] Image FadeOut;
     TableMove Table;
-    CheckEndPoint CheckEnd;
+    public bool GameOver;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +19,7 @@ public class StageManager1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CheckEnd = FindObjectOfType<CheckEndPoint>();
-        if (CheckEnd.GameOver)
+        if (GameOver)
         {
             FadeOut.gameObject.SetActive(true);
         }

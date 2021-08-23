@@ -9,6 +9,7 @@ public class TableMove : MonoBehaviour
     public bool buttonPressed;
     public bool teleportButton;
     public float speed;
+    float usingspeed;
     public int count;
     bool Lock;
     [SerializeField] GameObject MoveButton;
@@ -16,7 +17,7 @@ public class TableMove : MonoBehaviour
 
     void Start()
     {
-
+        usingspeed = speed;
     }
 
     void Update()
@@ -32,6 +33,7 @@ public class TableMove : MonoBehaviour
                     moveEndFloor();
                     if (transform.position == EndPoint.position)
                     {
+                        usingspeed = speed;
                         teleportButton = true;
                         MoveButton.GetComponent<Rigidbody>().isKinematic = false;
                         TelButton.GetComponent<Rigidbody>().isKinematic = false;
@@ -54,6 +56,7 @@ public class TableMove : MonoBehaviour
                     moveStartFloor();
                     if (transform.position == StartPoint.position)
                     {
+                        usingspeed = speed;
                         teleportButton = false;
                         MoveButton.GetComponent<Rigidbody>().isKinematic = false;
                         TelButton.GetComponent<Rigidbody>().isKinematic = false;
@@ -109,11 +112,16 @@ public class TableMove : MonoBehaviour
 
     void moveEndFloor()
     {
-        transform.position = Vector3.MoveTowards(transform.position, EndPoint.position, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, EndPoint.position, usingspeed * Time.deltaTime);
+        if (Mathf.Abs(transform.position.x - EndPoint.position.x) < 2.8f)
+            usingspeed *= 0.96f;
+
     }
     void moveStartFloor()
     {
-        transform.position = Vector3.MoveTowards(transform.position, StartPoint.position, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, StartPoint.position, usingspeed * Time.deltaTime);
+        if (Mathf.Abs(transform.position.x - StartPoint.position.x) < 2.8f)
+            usingspeed *= 0.96f;
     }
     void telEndFloor()
     {
