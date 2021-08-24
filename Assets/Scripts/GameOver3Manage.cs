@@ -19,7 +19,7 @@ public class GameOver3Manage : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer > 10.0f)
+        if (timer > 8.0f)
         {
             FadeOut.SetActive(true);
 
