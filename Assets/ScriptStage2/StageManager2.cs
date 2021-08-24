@@ -19,6 +19,7 @@ public class StageManager2 : MonoBehaviour
     [SerializeField] GameObject FadeOut;
     [SerializeField] AudioSource BGM;
     [SerializeField] GameObject ClearFadeOut;
+    [SerializeField] GameObject GameOverFadeOut;
     MakeWeight MakeWeight;
     int UsingScale = 2;
     int ClearCount = 1;
@@ -70,7 +71,7 @@ public class StageManager2 : MonoBehaviour
             {
                 SceneTimer += Time.deltaTime;
                 Player.AddComponent<Rigidbody>();
-                FadeOut.SetActive(true);
+                GameOverFadeOut.SetActive(true);
                 if (SceneTimer > 3.0f)
                     SceneManager.LoadScene("GameOver3");
             }
