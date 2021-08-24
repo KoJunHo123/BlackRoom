@@ -5,6 +5,7 @@ using UnityEngine;
 public class HittingSound : MonoBehaviour
 {
     [SerializeField] AudioSource hitAudioPlayer;
+    public ParticleSystem DustEffect;
     public float timer1;
     public float timer2;
     public float hittingTime;
@@ -28,7 +29,10 @@ public class HittingSound : MonoBehaviour
             {
                 hitAudioPlayer.Play();
                 timer2 = 0;
+                DustEffect.Play();
+                
             }
+
         }
 
 
