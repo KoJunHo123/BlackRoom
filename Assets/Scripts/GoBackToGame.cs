@@ -5,11 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GoBackToGame : MonoBehaviour
 {
-    public GameObject HandOnOff;
-
-    HandMoveEnd Hand;
-    public Transform Back;
-    public float speed;
+    [SerializeField] GameObject Door;
+    [SerializeField] GameObject FadeOut;
     public float delta;
     public bool TryAgain;
     void Start()
@@ -19,19 +16,21 @@ public class GoBackToGame : MonoBehaviour
 
     void Update()
     {
-        Hand = FindObjectOfType<HandMoveEnd>();
         if (TryAgain)
         {
             delta += Time.deltaTime;
-            Hand.CheckEnd = true;
-            if (delta > 5f)
+             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + Time.deltaTime * 3);
+              Door.transform.localScale = new Vector3(Door.transform.localScale.x + Time.deltaTime, Door.transform.localScale.y + Time.deltaTime, Door.transform.localScale.z);
+            FadeOut.SetActive(true);
+
+            if (delta > 3f)
                 SceneManager.LoadScene(PlayerPrefs.GetInt("NowStage"));
         }
+        
     }
 
     public void MoveChange()
     {
-        HandOnOff.SetActive(true);
         TryAgain = true;
     }
 

@@ -9,7 +9,7 @@ public class TableMove : MonoBehaviour
     public bool buttonPressed;
     public bool teleportButton;
     public float speed;
-    float usingspeed;
+    public float usingspeed;
     public int count;
     bool Lock;
     [SerializeField] GameObject MoveButton;
@@ -115,7 +115,7 @@ public class TableMove : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, EndPoint.position, usingspeed * Time.deltaTime);
         if (Mathf.Abs(transform.position.x - EndPoint.position.x) < 3.5f)
         {
-            usingspeed *= 0.97f;
+            usingspeed *= 0.982f;
             if (Mathf.Abs(transform.position.x - EndPoint.position.x) < 0.03f)
                 transform.position = EndPoint.position;
         }
@@ -126,7 +126,7 @@ public class TableMove : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, StartPoint.position, usingspeed * Time.deltaTime);
         if (Mathf.Abs(transform.position.x - StartPoint.position.x) < 3.5f)
         {
-            usingspeed *= 0.97f;
+            usingspeed *= 0.982f;
             if (Mathf.Abs(transform.position.x - StartPoint.position.x) < 0.03f)
                 transform.position = StartPoint.position;
         }

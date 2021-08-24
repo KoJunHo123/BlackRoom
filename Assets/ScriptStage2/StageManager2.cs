@@ -21,7 +21,7 @@ public class StageManager2 : MonoBehaviour
     [SerializeField] GameObject ClearFadeOut;
     MakeWeight MakeWeight;
     int UsingScale = 2;
-    int ClearCount = 2;
+    int ClearCount = 1;
     AnswerPlate GetClear;
     public bool GameClear;
     public bool GameOver;
@@ -72,7 +72,7 @@ public class StageManager2 : MonoBehaviour
                 Player.AddComponent<Rigidbody>();
                 FadeOut.SetActive(true);
                 if (SceneTimer > 3.0f)
-                    SceneManager.LoadScene("GameOver");
+                    SceneManager.LoadScene("GameOver3");
             }
 
         }

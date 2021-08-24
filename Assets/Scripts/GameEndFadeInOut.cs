@@ -11,7 +11,6 @@ public class GameEndFadeInOut : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.SetInt("GameClear", 0);
         Panelimage = GetComponent<Image>();
         if (PlayerPrefs.GetInt("GameClear") == 1)
             color = Color.black;
