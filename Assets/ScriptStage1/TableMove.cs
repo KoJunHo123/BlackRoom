@@ -113,15 +113,23 @@ public class TableMove : MonoBehaviour
     void moveEndFloor()
     {
         transform.position = Vector3.MoveTowards(transform.position, EndPoint.position, usingspeed * Time.deltaTime);
-        if (Mathf.Abs(transform.position.x - EndPoint.position.x) < 2.8f)
-            usingspeed *= 0.96f;
+        if (Mathf.Abs(transform.position.x - EndPoint.position.x) < 3.5f)
+        {
+            usingspeed *= 0.97f;
+            if (Mathf.Abs(transform.position.x - EndPoint.position.x) < 0.03f)
+                transform.position = EndPoint.position;
+        }
 
     }
     void moveStartFloor()
     {
         transform.position = Vector3.MoveTowards(transform.position, StartPoint.position, usingspeed * Time.deltaTime);
-        if (Mathf.Abs(transform.position.x - StartPoint.position.x) < 2.8f)
-            usingspeed *= 0.96f;
+        if (Mathf.Abs(transform.position.x - StartPoint.position.x) < 3.5f)
+        {
+            usingspeed *= 0.97f;
+            if (Mathf.Abs(transform.position.x - StartPoint.position.x) < 0.03f)
+                transform.position = StartPoint.position;
+        }
     }
     void telEndFloor()
     {

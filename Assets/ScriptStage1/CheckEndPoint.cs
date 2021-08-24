@@ -17,7 +17,6 @@ public class CheckEndPoint : MonoBehaviour
     [SerializeField] GameObject Clear;
     [SerializeField] GameObject FadeOut;
     [SerializeField] GameObject GameOverText;
-    [SerializeField] GameObject Obstacle;
     CheckStartPoint CheckStart;
     StageManager1 Manager;
     public bool WolfinPoint = false;
@@ -114,7 +113,6 @@ public class CheckEndPoint : MonoBehaviour
         Explain.SetActive(false);
         if (timer > 3.0f)
         {
-            Obstacle.SetActive(true);
             Manager.GameOver = true;
             floor.GetComponent<BoxCollider>().isTrigger = true;
             XRrig.GetComponent<Rigidbody>().isKinematic = false;
